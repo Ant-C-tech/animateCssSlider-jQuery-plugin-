@@ -4,11 +4,11 @@
 
         //========  Default  ========
         const defaultsSettings = {
-            auto: false,
+            auto: true,
             autoplayInterval: 3500,
-            animationType: 'fadeDown/fadeUp',
+            animationType: 'fadeOut/fadeIn',
             animationTime: '',
-            constSliderHeight: true,
+            constSliderHeight: false,
         }
 
         // animationType:

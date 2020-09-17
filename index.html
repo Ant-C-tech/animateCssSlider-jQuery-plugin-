@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="animateCssSlider.jquery.js"></script>
-    <script src="app.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="js/animateCssSlider.jquery.js"></script>
+    <script defer src="js/app.js"></script>
 </head>
 
 <body class="text-center">
@@ -38,23 +36,175 @@
         <p class="mb-1 font-weight-bold">Include CSS.</p>
         <p class="mb-1">First, include Animate.CSS it directly to your HTML head using a CDN:</p>
 
-        <pre class="bg-dark text-light rounded pl-1 pr-1">
+        <pre class="bg-dark text-light text-left rounded px-3">
             <code>
 &#60link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"&#62
             </code>
         </pre>
 
         <p class="mb-1">Then include Bootstrap 4 CSS files to your HTML head using a CDN:</p>
-        <pre class="bg-dark text-light rounded pl-1 pr-1">
+        <pre class="bg-dark text-light text-left rounded px-3">
             <code>
 &#60link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"&#62
             </code>
         </pre>
 
+        <p class="mb-1 font-weight-bold">Include JS.</p>
+        <p class="mb-1">Yep, include jQuery 3.5.1, animateCssSlider and your own app files after your css link to your
+            HTML head.
+        </p>
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+&#60script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&#62&#60/script&#62
+&#60script defer src="js/animateCssSlider.jquery.js"&#62&#60/script&#62
+&#60script defer src="js/app.js"&#62&#60/script&#62
+            </code>
+        </pre>
+
+        <p class="mb-1 font-weight-bold">Include HTML.</p>
+        <p class="mb-1">Create div-container with random id for every slider you need at any place of HTML you
+            need.</p>
+        <p class="mb-1">For example:</p>
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+&#60div id="galery" class="container my-3">&#60/div>
+            </code>
+        </pre>
+
+        <p class="mb-1 font-weight-bold">Slides collection.</p>
+        <p class="mb-1">Prepare some collections of images for every slider you need.</p>
+        <p class="mb-1">It must be an array with slides each of them must be an array too. Every slide contains "src"
+            and "alt" atributes.</p>
+        <p class="mb-1">For example:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+[
+['https://picsum.photos/650', '#'],
+['https://picsum.photos/651', '#'],
+['https://picsum.photos/652', '#'],
+['https://picsum.photos/553', '#'],
+['https://picsum.photos/654', '#'],
+]
+            </code>
+        </pre>
+
+        <p class="mb-1">For debugging slider contains default collection:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+[
+['img/img1.jpg', '#'],
+['img/img2.jpg', '#'],
+['img/img3.jpg', '#'],
+['img/img4.jpg', '#'],
+['img/img5.jpg', '#'],
+]
+            </code>
+        </pre>
+
+        <p class="mb-1 font-weight-bold">Call the plugin.</p>
+        <p class="mb-1">Now call in your app.js file the initializer function for your every slider with the same or
+            different settings and all your sliders are ready.</p>
+        <p class="mb-1">Here '#galery' is id of our container (unique for every slider).</p>
+        <p class="mb-1">For example, by default:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery').animateCssSlider({}, [])
+            </code>
+        </pre>
 
         <div id="galery" class="container my-3"></div>
+
+        <h2 class="display-5 bg-primary rounded mb-3 mt-5 text-light">Slider settings</h2>
+        <h5 class="border-top text-primary pt-3 pb-3">We’ll be happy to help you!</h5>
+
+        <p class="mb-1">By default slider has next settings:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+{
+    auto: true,
+    autoplayInterval: 3500,
+    animationType: 'fadeOut/fadeIn',
+    animationTime: '',
+    constSliderHeight: false,
+}
+            </code>
+        </pre>
+
+        <p class="mb-1">Where are:</p>
+        <ul class="text-left">
+            <li><b>auto</b> - slide show - type: boolean.
+                <ul>
+                    <li>true</li>
+                    <li>false</li>
+                </ul>
+            </li>
+            <li><b>autoplayInterval</b> - autoplay interval timeout - type: number (ms)</li>
+            <li><b>animationType</b> - animation by Animate.css library - type: string. You can familiarize all the
+                animation type at https://animate.style/ or "Examples".
+                <ul>
+                    <li>'fadeOut/fadeIn'</li>
+                    <li>'fadeDown/fadeUp'</li>
+                </ul>
+            </li>
+            <li><b>animationTime</b> - you can control the speed of the animation - type: string. Default speed is 1s.
+                You can familiarize all the animation type at https://animate.style/ or "Examples".
+                <ul>
+                    <li>"animate__slow" - 2s.</li>
+                    <li>"animate__slower" - 3s.</li>
+                    <li>"animate__fast" - 800ms.</li>
+                    <li>"animate__faster" - 500ms.</li>
+                </ul>
+            </li>
+            <li><b>constSliderHeight</b> - the slider height is constant and approximately equal to the height of the
+                largest slide - type: boolean.
+                <ul>
+                    <li>true</li>
+                    <li>false</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 class="display-5 bg-primary text-light rounded mb-3">Examples</h2>
+        <h5 class="border-top text-primary pt-3 pb-3">We’ll be happy to show you!</h5>
+
+        <p class="mb-1 font-weight-bold">Example #1.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery2').animateCssSlider({
+    auto: true,
+    autoplayInterval: 3000,
+    animationType: 'fadeDown/fadeUp',
+    animationTime: 'animate__fast',
+    constSliderHeight: false,
+}, [
+    ['https://picsum.photos/651', '#'],
+    ['https://picsum.photos/652', '#'],
+    ['https://picsum.photos/653', '#'],
+    ['https://picsum.photos/654', '#'],
+    ['https://picsum.photos/655', '#'],
+])
+            </code>
+        </pre>
+
         <div id="galery2" class="container my-3"></div>
+
+
+        <p class="mb-1 font-weight-bold">Example #2.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+
+            </code>
+        </pre>
+
         <div id="galery3" class="container my-3"></div>
 
 
