@@ -8,11 +8,13 @@
             autoplayInterval: 3500,
             animationType: 'fadeOut/fadeIn',
             animationTime: '',
+            hoverAnimation: false,
+            hoverAnimationType: 'pulse',
             constSliderHeight: false,
             overflowHidden: true
         }
 
-        // animationType:
+        // ====  animationType:  ====
         // fadeOut/fadeIn
         // fadeOutInDown/fadeOutInUp
         // fadeOutInDownBig/fadeOutInUpBig
@@ -29,12 +31,35 @@
         // flipOutY/flipInY
         // lightSpeedOutInLeft/lightSpeedOutInRight
         // rotateOut/rotateIn
+        // rotateOutInDownLeft/rotateOutInUpLeft
+        // rotateOutInDownRight/rotateOutInUpRight
+        // hingeOut/fadeIn
+        // bounceOut/jackInTheBox
+        // rollOut/rollIn
+        // zoomOut/zoomIn
+        // zoomOutInDown/zoomOutInUp
+        // zoomOutInLeft/zoomOutInRight
+        // slideOutInDown/slideOutInUp
+        // slideOutInLeft/slideOutInRight
 
-        // animationTime:
+        // ====  animationTime:  ====
         // animate__slow	2s
         // animate__slower	3s
         // animate__fast	800ms
         // animate__faster	500ms
+
+        // ====  hoverAnimationType: ====
+        // pulse
+        // bounce
+        // rubberBand
+        // shakeX
+        // shakeY
+        // headShake
+        // swing
+        // tada
+        // wobble
+        // jello
+        // heartBeat
 
         const defaultContent = [
             ['img/img1.jpg', '#'],
@@ -65,7 +90,6 @@
         //Service variables
         let counter = 0
         let slideshowInterval
-        let startSlidShowInterval
         let slideShowFlag = null
 
         //Disable button during animation
@@ -92,38 +116,25 @@
             }
         })
 
-        $(window).scroll(function () {
-            var wt = $(window).scrollTop();
-            var wh = $(window).height();
-            var et = $container.offset().top;
-            var eh = $container.outerHeight();
+        $(window).ready(startSlideShowOnFocus)
+        $(window).scroll(startSlideShowOnFocus)
 
-            if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
-                if (slideShowFlag == null || slideShowFlag == false) {
-                    let timer = setTimeout(() => {
-                        next()
-                        clearTimeout(timer)
-                    }, 1000)
-                    startSlideShow()
-                }
-                slideShowFlag = true;
-            } else {
-                if (slideShowFlag == null || slideShowFlag == true) {
-                    clearInterval(slideshowInterval)
-                    clearInterval(startSlidShowInterval)
-                }
-                slideShowFlag = false;
+        $container.hover(() => {
+            clearInterval(slideshowInterval)
+            slideShowFlag = false
+            if (options.hoverAnimation === true) {
+                getHoverAnimationFunction()
             }
-        });
+        }, () => {
+            startSlideShow()
+            if (options.hoverAnimation === true) {
+                getHoverAnimationClearClass()
+            }
+        })
 
 
         $btnNext.on('click', () => {
             clearInterval(slideshowInterval)
-            clearInterval(startSlidShowInterval)
-
-            startSlidShowInterval = setTimeout(() => {
-                startSlideShow()
-            }, 5000)
 
             if (isRun) {
                 return false
@@ -135,11 +146,6 @@
 
         $btnPrev.on('click', () => {
             clearInterval(slideshowInterval)
-            clearInterval(startSlidShowInterval)
-
-            startSlidShowInterval = setTimeout(() => {
-                startSlideShow()
-            }, 5000)
 
             if (isRun) {
                 return false
@@ -204,6 +210,7 @@
         function startSlideShow() {
             if (options.auto) {
                 slideshowInterval = setInterval(() => next(), options.autoplayInterval)
+                slideShowFlag = true
             }
         }
 
@@ -263,7 +270,26 @@
                     return sliderAnimation('animate__lightSpeedOutLeft', counterInc, 'animate__lightSpeedInRight')
                 case (options.animationType === 'rotateOut/rotateIn'):
                     return sliderAnimation('animate__rotateOut', counterInc, 'animate__rotateIn')
-
+                case (options.animationType === 'rotateOutInDownLeft/rotateOutInUpLeft'):
+                    return sliderAnimation('animate__rotateOutDownLeft', counterInc, 'animate__rotateInDownLeft')
+                case (options.animationType === 'rotateOutInDownRight/rotateOutInUpRight'):
+                    return sliderAnimation('animate__rotateOutDownRight', counterInc, 'animate__rotateInDownRight')
+                case (options.animationType === 'hingeOut/fadeIn'):
+                    return sliderAnimation('animate__hinge', counterInc, 'animate__fadeIn')
+                case (options.animationType === 'bounceOut/jackInTheBox'):
+                    return sliderAnimation('animate__bounceOut', counterInc, 'animate__jackInTheBox')
+                case (options.animationType === 'rollOut/rollIn'):
+                    return sliderAnimation('animate__rollOut', counterInc, 'animate__rollIn')
+                case (options.animationType === 'zoomOut/zoomIn'):
+                    return sliderAnimation('animate__zoomOut', counterInc, 'animate__zoomIn')
+                case (options.animationType === 'zoomOutInDown/zoomOutInUp'):
+                    return sliderAnimation('animate__zoomOutDown', counterInc, 'animate__zoomInDown')
+                case (options.animationType === 'zoomOutInLeft/zoomOutInRight'):
+                    return sliderAnimation('animate__zoomOutLeft', counterInc, 'animate__zoomInRight')
+                case (options.animationType === 'slideOutInDown/slideOutInUp'):
+                    return sliderAnimation('animate__slideOutDown', counterInc, 'animate__slideInDown')
+                case (options.animationType === 'slideOutInLeft/slideOutInRight'):
+                    return sliderAnimation('animate__slideOutLeft', counterInc, 'animate__slideInRight')
             }
         }
 
@@ -301,6 +327,26 @@
                     return sliderAnimation('animate__lightSpeedOutRight', counterDec, 'animate__lightSpeedInLeft')
                 case (options.animationType === 'rotateOut/rotateIn'):
                     return sliderAnimation('animate__rotateOut', counterDec, 'animate__rotateIn')
+                case (options.animationType === 'rotateOutInDownLeft/rotateOutInUpLeft'):
+                    return sliderAnimation('animate__rotateOutUpLeft', counterDec, 'animate__rotateInUpLeft')
+                case (options.animationType === 'rotateOutInDownRight/rotateOutInUpRight'):
+                    return sliderAnimation('animate__rotateOutUpRight', counterDec, 'animate__rotateInUpRight')
+                case (options.animationType === 'hingeOut/fadeIn'):
+                    return sliderAnimation('animate__hinge', counterDec, 'animate__fadeIn')
+                case (options.animationType === 'bounceOut/jackInTheBox'):
+                    return sliderAnimation('animate__bounceOut', counterDec, 'animate__jackInTheBox')
+                case (options.animationType === 'rollOut/rollIn'):
+                    return sliderAnimation('animate__rollOut', counterDec, 'animate__rollIn')
+                case (options.animationType === 'zoomOut/zoomIn'):
+                    return sliderAnimation('animate__zoomOut', counterDec, 'animate__zoomIn')
+                case (options.animationType === 'zoomOutInDown/zoomOutInUp'):
+                    return sliderAnimation('animate__zoomOutUp', counterDec, 'animate__zoomInUp')
+                case (options.animationType === 'zoomOutInLeft/zoomOutInRight'):
+                    return sliderAnimation('animate__zoomOutRight', counterDec, 'animate__zoomInLeft')
+                case (options.animationType === 'slideOutInDown/slideOutInUp'):
+                    return sliderAnimation('animate__slideOutUp', counterDec, 'animate__slideInUp')
+                case (options.animationType === 'slideOutInLeft/slideOutInRight'):
+                    return sliderAnimation('animate__slideOutRight', counterDec, 'animate__slideInLeft')
             }
         }
 
@@ -324,8 +370,25 @@
             return maxSlideHeight
         }
 
+        function startSlideShowOnFocus() {
+            var wt = $(window).scrollTop()
+            var wh = $(window).height()
+            var et = $container.offset().top
+            var eh = $container.outerHeight()
 
-        //========  Function of animation  ===========
+            if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
+                if (slideShowFlag == null || slideShowFlag == false) {
+                    startSlideShow()
+                }
+            } else {
+                if (slideShowFlag == null || slideShowFlag == true) {
+                    clearInterval(slideshowInterval)
+                }
+                slideShowFlag = false
+            }
+        }
+
+        //========  Slider main animation  ===========
 
         function sliderAnimation(animationCurrentClass, counterFunc, animationNextClass) {
             $images.eq(counter).addClass(`animate__animated ${animationCurrentClass} ${options.animationTime}`)
@@ -346,6 +409,71 @@
             })
         }
 
+        //========  Slider "on hover" animation  ===========
+
+        function getHoverAnimationFunction() {
+            switch (true) {
+                case (options.hoverAnimationType === 'pulse'):
+                    return hoverAnimation('animate__pulse')
+                case (options.hoverAnimationType === 'bounce'):
+                    return hoverAnimation('animate__bounce')
+                case (options.hoverAnimationType === 'rubberBand'):
+                    return hoverAnimation('animate__rubberBand')
+                case (options.hoverAnimationType === 'shakeX'):
+                    return hoverAnimation('animate__shakeX')
+                case (options.hoverAnimationType === 'shakeY'):
+                    return hoverAnimation('animate__shakeY')
+                case (options.hoverAnimationType === 'headShake'):
+                    return hoverAnimation('animate__headShake')
+                case (options.hoverAnimationType === 'swing'):
+                    return hoverAnimation('animate__swing')
+                case (options.hoverAnimationType === 'tada'):
+                    return hoverAnimation('animate__tada')
+                case (options.hoverAnimationType === 'wobble'):
+                    return hoverAnimation('animate__wobble')
+                case (options.hoverAnimationType === 'jello'):
+                    return hoverAnimation('animate__jello')
+                case (options.hoverAnimationType === 'heartBeat'):
+                    return hoverAnimation('animate__heartBeat')
+            }
+        }
+
+        function getHoverAnimationClearClass() {
+            switch (true) {
+                case (options.hoverAnimationType === 'pulse'):
+                    return hoverAnimationClearClass('animate__pulse')
+                case (options.hoverAnimationType === 'bounce'):
+                    return hoverAnimationClearClass('animate__bounce')
+                case (options.hoverAnimationType === 'rubberBand'):
+                    return hoverAnimationClearClass('animate__rubberBand')
+                case (options.hoverAnimationType === 'shakeX'):
+                    return hoverAnimationClearClass('animate__shakeX')
+                case (options.hoverAnimationType === 'shakeY'):
+                    return hoverAnimationClearClass('animate__shakeY')
+                case (options.hoverAnimationType === 'headShake'):
+                    return hoverAnimationClearClass('animate__headShake')
+                case (options.hoverAnimationType === 'swing'):
+                    return hoverAnimationClearClass('animate__swing')
+                case (options.hoverAnimationType === 'tada'):
+                    return hoverAnimationClearClass('animate__tada')
+                case (options.hoverAnimationType === 'wobble'):
+                    return hoverAnimationClearClass('animate__wobble')
+                case (options.hoverAnimationType === 'jello'):
+                    return hoverAnimationClearClass('animate__jello')
+                case (options.hoverAnimationType === 'heartBeat'):
+                    return hoverAnimationClearClass('animate__heartBeat')
+            }
+        }
+
+        function hoverAnimation(hoverAnimationClass) {
+            $images.addClass(`animate__animated ${hoverAnimationClass}`)
+        }
+
+        function hoverAnimationClearClass(hoverAnimationClass) {
+            $images.on('animationend', function () {
+                $images.removeClass(`${hoverAnimationClass}`)
+            })
+        }
 
         return this
     }
