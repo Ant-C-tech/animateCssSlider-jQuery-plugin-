@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <!-- Animate.css Slider -->
+    <script defer src="js/animateCssSlider.jquery.js"></script>
+
+    <script defer src="js/appInst.js"></script>
+</head>
+
+<body class="text-center">
+
+    <div class="container text-center mt-3 mb-3 pt-3 rounded bg-light">
+        <div class="bg-primary rounded">
+            <h1 class="display-4  pb-1 mb-0 text-light">Animate.css Slider</h1>
+
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <button class="navbar-toggler  bg-light mx-auto w-100" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item font-weight-bold">
+                            <a class="nav-link text-light" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active font-weight-bold">
+                            <a class="nav-link text-light" href="#">Installation<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item  font-weight-bold">
+                            <a class="nav-link text-light" href="settings.html">Settings</a>
+                        </li>
+                        <li class="nav-item  font-weight-bold">
+                            <a class="nav-link text-light" href="examples1.html">Examples 1</a>
+                        </li>
+                        <li class="nav-item  font-weight-bold">
+                            <a class="nav-link text-light" href="examples2.html">Examples 2</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <h5 class="border-top text-primary pt-3 pb-3">Create a beautiful responsive carousel slider.</h5>
+
+        <h2 class="display-5 bg-primary rounded mb-3 text-light">Installation</h2>
+        <h5 class="border-top text-primary pt-3 pb-3">We’ll be happy to help you!</h5>
+
+        <p class="mb-1 font-weight-bold">Include CSS.</p>
+        <p class="mb-1">First, include Animate.CSS it directly to your HTML head using a CDN:</p>
+
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+&#60link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"&#62
+            </code>
+        </pre>
+
+        <p class="mb-1">Then include Bootstrap 4 CSS files to your HTML head using a CDN:</p>
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+&#60link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"&#62
+            </code>
+        </pre>
+
+        <p class="mb-1">Also you have to take into consideration that slider after its initialization automaticly add
+            some styles to you project:</p>
+
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+body {
+    overflow-x: hidden;
+}
+
+#"your container id"{
+    position: relative;
+    transition: all linear 0.3s;
+    overflow: hidden; (optional)
+}
+            </code>
+        </pre>
+
+        <p class="mb-1 font-weight-bold">Include JS.</p>
+        <p class="mb-1">Yep, include jQuery 3.5.1, animateCssSlider and your own app files after your css link to your
+            HTML head.
+        </p>
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+&#60script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&#62&#60/script&#62
+&#60script defer src="js/animateCssSlider.jquery.js"&#62&#60/script&#62
+&#60script defer src="js/app.js"&#62&#60/script&#62
+            </code>
+        </pre>
+
+        <p class="mb-1 font-weight-bold">Include HTML.</p>
+        <p class="mb-1">Create div-container with random id for every slider you need at any place of HTML you
+            need.</p>
+        <p class="mb-1">For example:</p>
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+&#60div id="galery" class="container my-3">&#60/div>
+            </code>
+        </pre>
+
+        <p class="mb-1 font-weight-bold">Slides collection.</p>
+        <p class="mb-1">Prepare some collections of images for every slider you need.</p>
+        <p class="mb-1">It must be an array with slides each of them must be an array too. Every slide contains "src"
+            and "alt" atributes.</p>
+        <p class="mb-1">For example:</p>
+
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+[
+['https://picsum.photos/650', '#'],
+['https://picsum.photos/651', '#'],
+['https://picsum.photos/652', '#'],
+['https://picsum.photos/553', '#'],
+['https://picsum.photos/654', '#'],
+]
+            </code>
+        </pre>
+
+        <p class="mb-1">For debugging slider contains default collection:</p>
+
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+[
+['img/img1.jpg', '#'],
+['img/img2.jpg', '#'],
+['img/img3.jpg', '#'],
+['img/img4.jpg', '#'],
+['img/img5.jpg', '#'],
+]
+            </code>
+        </pre>
+
+        <p class="mb-1 font-weight-bold">Call the plugin.</p>
+        <p class="mb-1">Now call in your app.js file the initializer function for your every slider with the same or
+            different settings and all your sliders are ready.</p>
+        <p class="mb-1">Here '#galery' is id of our container (unique for every slider).</p>
+        <p class="mb-1">For example, by default:</p>
+
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+$('#galery').animateCssSlider({}, [])
+            </code>
+        </pre>
+
+        <div id="galery" class="container my-3"></div>
+
+        <h2 class="display-5 bg-primary text-light rounded mb-3">Enjoy it!</h2>
+    </div>
+
+       
+</body>

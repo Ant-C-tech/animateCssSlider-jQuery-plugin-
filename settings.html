@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body class="text-center">
+
+    <div class="container text-center mt-3 mb-3 pt-3 rounded bg-light">
+        <div class="bg-primary rounded">
+            <h1 class="display-4  pb-1 mb-0 text-light">Animate.css Slider</h1>
+
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <button class="navbar-toggler  bg-light mx-auto w-100" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item font-weight-bold">
+                            <a class="nav-link text-light" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item  font-weight-bold">
+                            <a class="nav-link text-light" href="instalation.html">Installation</a>
+                        </li>
+                        <li class="nav-item active  font-weight-bold">
+                            <a class="nav-link text-light" href="#">Settings <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item  font-weight-bold">
+                            <a class="nav-link text-light" href="examples1.html">Examples 1</a>
+                        </li>
+                        <li class="nav-item  font-weight-bold">
+                            <a class="nav-link text-light" href="examples2.html">Examples 2</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <h5 class="border-top text-primary pt-3 pb-3">Create a beautiful responsive carousel slider.</h5>
+
+        <h2 class="display-5 bg-primary rounded mb-3 text-light">Slider settings</h2>
+        <h5 class="border-top text-primary pt-3 pb-3">We’ll be happy to help you!</h5>
+
+        <p class="mb-1">By default slider has next settings:</p>
+
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+{
+    auto: true,
+    autoplayInterval: 3500,
+    animationType: 'fadeOut/fadeIn',
+    animationTime: '',
+    constSliderHeight: false,
+}
+            </code>
+        </pre>
+
+        <p class="mb-1">Where are:</p>
+        <ul class="text-left">
+            <li><b>auto</b> - start slideshow when slider is within the user's screen (stop slideshow on hover) - type:
+                boolean.
+                <ul>
+                    <li>true (default)</li>
+                    <li>false</li>
+                </ul>
+            </li>
+            <li><b>autoplayInterval</b> - autoplay interval timeout - type: number (ms)</li>
+            <li><b>animationType</b> - animation by Animate.css library - type: string. You can familiarize all the
+                animation type at https://animate.style/ or in "Examples".
+                <ul>
+                    <li>'fadeOut/fadeIn' (default)</li>
+                    <li>'fadeOutInDown/fadeOutInUp'</li>
+                    <li>'fadeOutInDownBig/fadeOutInUpBig'</li>
+                    <li>'fadeOutInLeft/fadeOutInRight'</li>
+                    <li>'fadeOutInLeftBig/fadeOutInRightBig'</li>
+                    <li>'fadeOutInLeftTop/fadeOutInRightBottom'</li>
+                    <li>'fadeOutInLeftBottom/fadeOutInRightTop'</li>
+                    <li>'backOutInDown/backOutInUp'</li>
+                    <li>'backOutInLeft/backOutInRight'</li>
+                    <li>'bounceOut/bounceIn'</li>
+                    <li>'bounceOutInDown/bounceOutInUp'</li>
+                    <li>'bounceOutInLeft/bounceOutInRight'</li>
+                    <li>'flipOutY/flipInY'</li>
+                    <li>'flipOutX/flipInX'</li>
+                    <li>'lightSpeedOutInLeft/lightSpeedOutInRight'</li>
+                    <li>'rotateOutInDownLeft/rotateOutInUpLeft'</li>
+                    <li>'rotateOutInDownRight/rotateOutInUpRight'</li>
+                    <li>'hingeOut/fadeIn'</li>
+                    <li>'bounceOut/jackInTheBox'</li>
+                    <li>'rollOut/rollIn'</li>
+                    <li>'zoomOut/zoomIn'</li>
+                    <li>'zoomOutInDown/zoomOutInUp'</li>
+                    <li>'zoomOutInLeft/zoomOutInRight'</li>
+                    <li>'slideOutInDown/slideOutInUp'</li>
+                    <li>'slideOutInLeft/slideOutInRight'</li>
+                </ul>
+            </li>
+            <li><b>animationTime</b> - you can control the speed of the animation - type: string. Default speed is 1s.
+                You can familiarize all the animation type at https://animate.style/ or in "Examples".
+                <ul>
+                    <li>"animate__slower" - 3s.</li>
+                    <li>"animate__slow" - 2s.</li>
+                    <li>"" - 1s. (default)</li>
+                    <li>"animate__fast" - 800ms.</li>
+                    <li>"animate__faster" - 500ms.</li>
+                </ul>
+            </li>
+            <li><b>hoverAnimation</b> - animation effect on slide hover - type: boolean.
+                <ul>
+                    <li>true</li>
+                    <li>false (default)</li>
+                </ul>
+            </li>
+            <li><b>hoverAnimationType</b> - hover animation by Animate.css library - type: string. You can familiarize
+                all the
+                animation type at https://animate.style/ or in "Examples".
+                <ul>
+                    <li>'pulse' (default)</li>
+                    <li>'bounce'</li>
+                    <li>'rubberBand'</li>
+                    <li>'shakeX'</li>
+                    <li>'shakeY'</li>
+                    <li>'headShake'</li>
+                    <li>'swing'</li>
+                    <li>'tada'</li>
+                    <li>'wobble'</li>
+                    <li>'jello'</li>
+                    <li>'heartBeat'</li>
+                </ul>
+            </li>
+            <li><b>constSliderHeight</b> - the slider height is constant and approximately equal to the height of the
+                largest slide - type: boolean.
+                <ul>
+                    <li>true</li>
+                    <li>false (default)</li>
+                </ul>
+            </li>
+            <li><b>overflowHidden</b> - container css property "overflow: hidden" - specifies what happens if content
+                overflows an element's box - type: boolean.
+                <ul>
+                    <li>true (default)</li>
+                    <li>false</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 class="display-5 bg-primary text-light rounded mb-3">Enjoy it!</h2>
+    </div>
+
+
+</body>

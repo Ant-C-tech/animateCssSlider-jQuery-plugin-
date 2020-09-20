@@ -4,6 +4,7 @@
 
         //========  Default  ========
         const defaultsSettings = {
+            contentSrc: 'array',
             auto: true,
             autoplayInterval: 3500,
             animationType: 'fadeOut/fadeIn',
@@ -11,8 +12,13 @@
             hoverAnimation: false,
             hoverAnimationType: 'pulse',
             constSliderHeight: false,
-            overflowHidden: true
+            overflowHidden: true,
+            control: true,
         }
+
+        // ====  contentSrc:  ====
+        // array
+        // html
 
         // ====  animationType:  ====
         // fadeOut/fadeIn
@@ -62,21 +68,22 @@
         // heartBeat
 
         const defaultContent = [
-            ['img/img1.jpg', '#'],
-            ['img/img2.jpg', '#'],
-            ['img/img3.jpg', '#'],
-            ['img/img4.jpg', '#'],
-            ['img/img5.jpg', '#'],
+            "<img src='img/default/img1.jpg' alt='#'></img>",
+            "<img src='img/default/img2.jpg' alt='#'></img>",
+            "<img src='img/default/img3.jpg' alt='#'></img>",
+            "<img src='img/default/img4.jpg' alt='#'></img>",
+            "<img src='img/default/img5.jpg' alt='#'></img>",
         ]
 
+        const $container = $(this)
+
         const options = $.extend(defaultsSettings, settings)
-        const $collection = $.extend(defaultContent, content)
+        let $collection = $.extend(defaultContent, content)
 
 
         //========  Variables:  ========
-        const $container = $(this)
 
-        let $images
+        let $slides
         let $btnGroup
         let $btnPrev
         let $btnNext
@@ -86,6 +93,10 @@
         const btnPrevName = originalName + '-btnPrev'
         const btnNextName = originalName + '-btnNext'
         const btnGroupName = originalName + '-btnGroup'
+        const controlElements = `<div class="btn-group ${btnGroupName} text-center d-block" role="group" aria-label="Button group">
+                                <button class="btn btn-secondary ${btnPrevName}" type="button">Prev</button>
+                                <button class="btn btn-secondary ${btnNextName}" type="button">Next</button>
+                                </div>`
 
         //Service variables
         let counter = 0
@@ -97,18 +108,24 @@
 
 
         //========  Create slider  ===========
-        createContent()
+        getCreateContentMethod()
 
         //Get links
         $wrappers = $(`.wrapper-${slideName}`)
-        $images = $(`.${slideName}`)
+        $wrappers.children().addClass(`${slideName}`)
+
+        $slides = $(`.${slideName}`)
         $btnGroup = $(`.${btnGroupName}`)
         $btnPrev = $(`.${btnPrevName}`)
         $btnNext = $(`.${btnNextName}`)
 
         addStyles()
 
-        $images.on('load', () => {
+        if (options.constSliderHeight === true) {
+            $container.css('height', `${getMaxSlideHeight() + $btnGroup.outerHeight() * 2}px`)
+        }
+
+        $slides.on('load', () => {
             if (options.constSliderHeight === false) {
                 resizeContainer()
             } else {
@@ -117,6 +134,11 @@
         })
 
         $(window).ready(startSlideShowOnFocus)
+        $(window).blur(function () {
+            clearInterval(slideshowInterval)
+            slideShowFlag = null
+        })
+        $(window).focus(startSlideShowOnFocus)
         $(window).scroll(startSlideShowOnFocus)
 
         $container.hover(() => {
@@ -168,23 +190,33 @@
 
         //========  Functions  ===========
 
-        function createContent() {
-            let content = ''
-
-            for (let i = 0; i < $collection.length; i++) {
-                content += `<div class="wrapper-${slideName}">
-                <img class="img-fluid ${slideName} rounded" src="${$collection[i][0]}" alt="${$collection[i][1]}">
-                </div>`
+        function getCreateContentMethod() {
+            switch (true) {
+                case (options.contentSrc === 'array'):
+                    return createContentArray()
+                case (options.contentSrc === 'html'):
+                    return createContentHtml()
             }
+        }
 
-            content += `<div class="btn-group ${btnGroupName} text-center d-block" role="group" aria-label="Button group">
-                            <button class="btn btn-secondary ${btnPrevName}" type="button">Prev</button>
-                            <button class="btn btn-secondary ${btnNextName}" type="button">Next</button>
-                        </div>`
-
-
+        function createContentArray() {
+            let content = ''
+            for (let i = 0; i < $collection.length; i++) {
+                content += `<div class="wrapper-${slideName}">${$collection[i]}</div>`
+            }
+            if (options.control === true) {
+                content += controlElements
+            }
             $container.html(content)
         }
+
+        function createContentHtml() {
+            $container.children().wrap(`<div class="wrapper-${slideName}"></div>`)
+            if (options.control === true) {
+                $container.append(controlElements)
+            }    
+        }
+
 
         function addStyles() {
             $('body').css('overflow-x', 'hidden')
@@ -193,8 +225,9 @@
                 $container.css('overflow', 'hidden')
             }
             $wrappers.css('position', 'relative')
-            $images.css('display', 'block').css('position', 'absolute').css('opacity', '0').css('top', '0')
-            $images.eq(counter).css('position', 'static').css('opacity', '1').css('margin', '0 auto')
+            $slides.css('display', 'block').css('position', 'absolute').css('opacity', '0').css('top', '0')
+            $slides.addClass('rounded')
+            $slides.eq(counter).css('position', 'static').css('opacity', '1').css('margin', '0 auto')
             $btnGroup.css('position', 'absolute').css('bottom', '15px').css('left', '50%')
                 .css('transform', 'translateX(-50%)').css('transition', 'all linear 0.5s')
         }
@@ -204,11 +237,11 @@
         }
 
         function getContainerHeight() {
-            return $images.eq(counter).parent().outerHeight()
+            return $slides.eq(counter).parent().outerHeight()
         }
 
         function startSlideShow() {
-            if (options.auto) {
+            if (options.auto && (slideShowFlag === null || slideShowFlag === false)) {
                 slideshowInterval = setInterval(() => next(), options.autoplayInterval)
                 slideShowFlag = true
             }
@@ -224,7 +257,7 @@
 
         function counterInc() {
             counter++
-            if (counter >= $images.length) {
+            if (counter >= $slides.length) {
                 counter = 0
             }
         }
@@ -232,7 +265,7 @@
         function counterDec() {
             counter--
             if (counter < 0) {
-                counter = $images.length - 1
+                counter = $slides.length - 1
             }
         }
 
@@ -351,19 +384,19 @@
         }
 
         function hideCurrentSlide() {
-            $images.eq(counter).css('position', 'absolute').css('opacity', '0').css('top', '0').css('left', '0')
+            $slides.eq(counter).css('position', 'absolute').css('opacity', '0').css('top', '0').css('left', '0')
         }
 
         function showCurrentSlide() {
-            $images.eq(counter).css('position', 'static').css('opacity', '1').css('margin', '0 auto')
+            $slides.eq(counter).css('position', 'static').css('opacity', '1').css('margin', '0 auto')
         }
 
         function getMaxSlideHeight() {
             let maxSlideHeight = 0
 
-            for (let i = 0; i < $images.length; i++) {
-                if ($images.eq(i).outerHeight() > maxSlideHeight) {
-                    maxSlideHeight = $images.eq(i).outerHeight()
+            for (let i = 0; i < $slides.length; i++) {
+                if ($slides.eq(i).outerHeight() > maxSlideHeight) {
+                    maxSlideHeight = $slides.eq(i).outerHeight()
                 }
             }
 
@@ -391,19 +424,19 @@
         //========  Slider main animation  ===========
 
         function sliderAnimation(animationCurrentClass, counterFunc, animationNextClass) {
-            $images.eq(counter).addClass(`animate__animated ${animationCurrentClass} ${options.animationTime}`)
+            $slides.eq(counter).addClass(`animate__animated ${animationCurrentClass} ${options.animationTime}`)
 
-            $images.eq(counter).one('animationend', function () {
-                $images.eq(counter).removeClass(`animate__animated ${animationCurrentClass} ${options.animationTime}`)
+            $slides.eq(counter).one('animationend', function () {
+                $slides.eq(counter).removeClass(`animate__animated ${animationCurrentClass} ${options.animationTime}`)
                 hideCurrentSlide()
                 counterFunc()
                 showCurrentSlide()
                 if (options.constSliderHeight === false) {
                     resizeContainer()
                 }
-                $images.eq(counter).addClass(`animate__animated ${animationNextClass} ${options.animationTime}`)
-                $images.eq(counter).one('animationend', function () {
-                    $images.eq(counter).removeClass(`animate__animated ${animationNextClass} ${options.animationTime}`)
+                $slides.eq(counter).addClass(`animate__animated ${animationNextClass} ${options.animationTime}`)
+                $slides.eq(counter).one('animationend', function () {
+                    $slides.eq(counter).removeClass(`animate__animated ${animationNextClass} ${options.animationTime}`)
                     isRun = false
                 })
             })
@@ -466,12 +499,12 @@
         }
 
         function hoverAnimation(hoverAnimationClass) {
-            $images.addClass(`animate__animated ${hoverAnimationClass}`)
+            $slides.addClass(`animate__animated ${hoverAnimationClass}`)
         }
 
         function hoverAnimationClearClass(hoverAnimationClass) {
-            $images.on('animationend', function () {
-                $images.removeClass(`${hoverAnimationClass}`)
+            $slides.on('animationend', function () {
+                $slides.removeClass(`${hoverAnimationClass}`)
             })
         }
 

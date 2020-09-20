@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <!-- Animate.css Slider -->
+    <script defer src="js/animateCssSlider.jquery.js"></script>
+
+    <script defer src="js/appEx1.js"></script>
+</head>
+
+<body class="text-center">
+
+    <div class="container text-center mt-3 mb-3 pt-3 rounded bg-light">
+        <div class="bg-primary rounded">
+            <h1 class="display-4  pb-1 mb-0 text-light">Animate.css Slider</h1>
+
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <button class="navbar-toggler  bg-light mx-auto w-100" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item font-weight-bold">
+                            <a class="nav-link text-light" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item  font-weight-bold">
+                            <a class="nav-link text-light" href="instalation.html">Installation</a>
+                        </li>
+                        <li class="nav-item  font-weight-bold">
+                            <a class="nav-link text-light" href="settings.html">Settings</a>
+                        </li>
+                        <li class="nav-item active  font-weight-bold">
+                            <a class="nav-link text-light" href="#">Examples 1 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item  font-weight-bold">
+                            <a class="nav-link text-light" href="examples2.html">Examples 2</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <h5 class="border-top text-primary pt-3 pb-3">Create a beautiful responsive carousel slider.</h5>
+
+        <h2 class="display-5 bg-primary text-light rounded mb-3">Examples 1</h2>
+        <h5 class="border-top text-primary pt-3 pb-3">We’ll be happy to show you!</h5>
+
+        <p class="mb-1 font-weight-bold">Example #1.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+$('#galery1').animateCssSlider({
+    auto: true,
+    autoplayInterval: 7500,
+    animationType: 'fadeOutInDown/fadeOutInUp',
+    animationTime: 'animate__slower',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: false,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/551/550', '#'],
+    ['https://picsum.photos/552/550', '#'],
+    ['https://picsum.photos/553/550', '#'],
+    ['https://picsum.photos/554/550', '#'],
+    ['https://picsum.photos/555/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery1" class="container my-3"></div>
+
+
+
+        <p class="mb-1 font-weight-bold">Example #2.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery2').animateCssSlider({
+    auto: true,
+    autoplayInterval: 4000,
+    animationType: 'fadeOutInDownBig/fadeOutInUpBig',
+    animationTime: 'animate__fast',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: false,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/556/550', '#'],
+    ['https://picsum.photos/557/550', '#'],
+    ['https://picsum.photos/558/550', '#'],
+    ['https://picsum.photos/559/550', '#'],
+    ['https://picsum.photos/560/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery2" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #3.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery3').animateCssSlider({
+    auto: true,
+    autoplayInterval: 4000,
+    animationType: 'fadeOutInLeft/fadeOutInRight',
+    animationTime: 'animate__faster',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: false,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/561/550', '#'],
+    ['https://picsum.photos/562/550', '#'],
+    ['https://picsum.photos/563/550', '#'],
+    ['https://picsum.photos/564/550', '#'],
+    ['https://picsum.photos/565/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery3" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #4.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery4').animateCssSlider({
+    auto: true,
+    autoplayInterval: 4500,
+    animationType: 'fadeOutInLeftBig/fadeOutInRightBig',
+    animationTime: 'animate__faster',
+    hoverAnimation: true,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: false,
+    overflowHidden: false,
+}, [
+    ['https://picsum.photos/566/550', '#'],
+    ['https://picsum.photos/567/550', '#'],
+    ['https://picsum.photos/568/550', '#'],
+    ['https://picsum.photos/569/550', '#'],
+    ['https://picsum.photos/570/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery4" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #5.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery5').animateCssSlider({
+    auto: true,
+    autoplayInterval: 5500,
+    animationType: 'fadeOutInLeftTop/fadeOutInRightBottom',
+    animationTime: 'animate__slow',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: false,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/571/550', '#'],
+    ['https://picsum.photos/572/550', '#'],
+    ['https://picsum.photos/573/550', '#'],
+    ['https://picsum.photos/574/550', '#'],
+    ['https://picsum.photos/575/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery5" class="container my-3"></div>
+
+
+        <p class="mb-1 font-weight-bold">Example #6.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery6').animateCssSlider({
+    auto: true,
+    autoplayInterval: 4000,
+    animationType: 'fadeOutInLeftBottom/fadeOutInRightTop',
+    animationTime: '',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: false,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/576/550', '#'],
+    ['https://picsum.photos/577/550', '#'],
+    ['https://picsum.photos/578/550', '#'],
+    ['https://picsum.photos/579/550', '#'],
+    ['https://picsum.photos/580/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery6" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #7.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery7').animateCssSlider({
+    auto: true,
+    autoplayInterval: 4500,
+    animationType: 'backOutInDown/backOutInUp',
+    animationTime: '',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: true,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/550', '#'],
+    ['https://picsum.photos/551', '#'],
+    ['https://picsum.photos/552', '#'],
+    ['https://picsum.photos/553', '#'],
+    ['https://picsum.photos/554', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery7" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #8.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery8').animateCssSlider({
+    auto: true,
+    autoplayInterval: 4500,
+    animationType: 'backOutInLeft/backOutInRight',
+    animationTime: '',
+    hoverAnimation: true,
+    hoverAnimationType: 'bounce',
+    constSliderHeight: true,
+    overflowHidden: false,
+}, [
+    ['https://picsum.photos/555/550', '#'],
+    ['https://picsum.photos/506/450', '#'],
+    ['https://picsum.photos/557/550', '#'],
+    ['https://picsum.photos/518/450', '#'],
+    ['https://picsum.photos/519/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery8" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #9.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery9').animateCssSlider({
+    auto: true,
+    autoplayInterval: 5500,
+    animationType: 'bounceOut/bounceIn',
+    animationTime: 'animate__slow',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: false,
+    overflowHidden: false,
+}, [
+    ['https://picsum.photos/550/550', '#'],
+    ['https://picsum.photos/551/550', '#'],
+    ['https://picsum.photos/552/550', '#'],
+    ['https://picsum.photos/553/550', '#'],
+    ['https://picsum.photos/554/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery9" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #10.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery10').animateCssSlider({
+    auto: true,
+    autoplayInterval: 4500,
+    animationType: 'bounceOutInDown/bounceOutInUp',
+    animationTime: '',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: false,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/555/550', '#'],
+    ['https://picsum.photos/556/550', '#'],
+    ['https://picsum.photos/557/550', '#'],
+    ['https://picsum.photos/558/550', '#'],
+    ['https://picsum.photos/559/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery10" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #11.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery11').animateCssSlider({
+    auto: true,
+    autoplayInterval: 7500,
+    animationType: 'bounceOutInLeft/bounceOutInRight',
+    animationTime: 'animate__slow',
+    hoverAnimation: true,
+    hoverAnimationType: 'rubberBand',
+    constSliderHeight: false,
+    overflowHidden: false,
+}, [
+    ['https://picsum.photos/560/550', '#'],
+    ['https://picsum.photos/561/550', '#'],
+    ['https://picsum.photos/562/550', '#'],
+    ['https://picsum.photos/563/550', '#'],
+    ['https://picsum.photos/564/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery11" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #12.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery12').animateCssSlider({
+    auto: true,
+    autoplayInterval: 6000,
+    animationType: 'flipOutX/flipInX',
+    animationTime: 'animate__slow',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: true,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/565/550', '#'],
+    ['https://picsum.photos/566/550', '#'],
+    ['https://picsum.photos/567/550', '#'],
+    ['https://picsum.photos/568/550', '#'],
+    ['https://picsum.photos/569/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery12" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #13.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery13').animateCssSlider({
+    auto: true,
+    autoplayInterval: 6500,
+    animationType: 'flipOutY/flipInY',
+    animationTime: 'animate__slow',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: true,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/550/550', '#'],
+    ['https://picsum.photos/551/550', '#'],
+    ['https://picsum.photos/552/550', '#'],
+    ['https://picsum.photos/553/550', '#'],
+    ['https://picsum.photos/554/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery13" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #14.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery14').animateCssSlider({
+    auto: true,
+    autoplayInterval: 5500,
+    animationType: 'lightSpeedOutInLeft/lightSpeedOutInRight',
+    animationTime: '',
+    hoverAnimation: true,
+    hoverAnimationType: 'shakeX',
+    constSliderHeight: false,
+    overflowHidden: false,
+}, [
+    ['https://picsum.photos/555/550', '#'],
+    ['https://picsum.photos/556/550', '#'],
+    ['https://picsum.photos/557/550', '#'],
+    ['https://picsum.photos/558/550', '#'],
+    ['https://picsum.photos/559/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery14" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #15.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery15').animateCssSlider({
+    auto: true,
+    autoplayInterval: 5500,
+    animationType: 'rotateOut/rotateIn',
+    animationTime: '',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: true,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/560/550', '#'],
+    ['https://picsum.photos/561/550', '#'],
+    ['https://picsum.photos/562/550', '#'],
+    ['https://picsum.photos/563/550', '#'],
+    ['https://picsum.photos/564/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery15" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #16.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery16').animateCssSlider({
+    auto: true,
+    autoplayInterval: 5000,
+    animationType: 'rotateOutInDownLeft/rotateOutInUpLeft',
+    animationTime: '',
+    hoverAnimation: true,
+    hoverAnimationType: 'shakeY',
+    constSliderHeight: true,
+    overflowHidden: false,
+}, [
+    ['https://picsum.photos/565/550', '#'],
+    ['https://picsum.photos/566/550', '#'],
+    ['https://picsum.photos/567/550', '#'],
+    ['https://picsum.photos/568/550', '#'],
+    ['https://picsum.photos/569/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery16" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #17.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery17').animateCssSlider({
+    auto: true,
+    autoplayInterval: 5000,
+    animationType: 'rotateOutInDownRight/rotateOutInUpRight',
+    animationTime: '',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: true,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/550/550', '#'],
+    ['https://picsum.photos/551/550', '#'],
+    ['https://picsum.photos/552/550', '#'],
+    ['https://picsum.photos/553/550', '#'],
+    ['https://picsum.photos/554/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery17" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #18.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery18').animateCssSlider({
+    auto: true,
+    autoplayInterval: 6500,
+    animationType: 'hingeOut/fadeIn',
+    animationTime: 'animate__slower',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: true,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/555/550', '#'],
+    ['https://picsum.photos/556/550', '#'],
+    ['https://picsum.photos/557/550', '#'],
+    ['https://picsum.photos/558/550', '#'],
+    ['https://picsum.photos/559/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery18" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #19.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery19').animateCssSlider({
+    auto: true,
+    autoplayInterval: 6000,
+    animationType: 'bounceOut/jackInTheBox',
+    animationTime: 'animate__slow',
+    hoverAnimation: true,
+    hoverAnimationType: 'headShake',
+    constSliderHeight: true,
+    overflowHidden: false,
+}, [
+    ['https://picsum.photos/560/550', '#'],
+    ['https://picsum.photos/561/550', '#'],
+    ['https://picsum.photos/562/550', '#'],
+    ['https://picsum.photos/563/550', '#'],
+    ['https://picsum.photos/564/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery19" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #20.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery20').animateCssSlider({
+    auto: true,
+    autoplayInterval: 5000,
+    animationType: 'rollOut/rollIn',
+    animationTime: '',
+    hoverAnimation: true,
+    hoverAnimationType: 'swing',
+    constSliderHeight: true,
+    overflowHidden: false,
+}, [
+    ['https://picsum.photos/565/550', '#'],
+    ['https://picsum.photos/566/550', '#'],
+    ['https://picsum.photos/567/550', '#'],
+    ['https://picsum.photos/568/550', '#'],
+    ['https://picsum.photos/569/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery20" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #21.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery21').animateCssSlider({
+    auto: true,
+    autoplayInterval: 4500,
+    animationType: 'zoomOut/zoomIn',
+    animationTime: 'animate__fast',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: false,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/550/550', '#'],
+    ['https://picsum.photos/551/550', '#'],
+    ['https://picsum.photos/552/550', '#'],
+    ['https://picsum.photos/553/550', '#'],
+    ['https://picsum.photos/554/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery21" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #22.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery22').animateCssSlider({
+    auto: true,
+    autoplayInterval: 6000,
+    animationType: 'zoomOutInDown/zoomOutInUp',
+    animationTime: 'animate__slow',
+    hoverAnimation: true,
+    hoverAnimationType: 'wobble',
+    constSliderHeight: false,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/555/550', '#'],
+    ['https://picsum.photos/556/550', '#'],
+    ['https://picsum.photos/557/550', '#'],
+    ['https://picsum.photos/558/550', '#'],
+    ['https://picsum.photos/559/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery22" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #23.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery23').animateCssSlider({
+    auto: true,
+    autoplayInterval: 5500,
+    animationType: 'zoomOutInLeft/zoomOutInRight',
+    animationTime: '',
+    hoverAnimation: true,
+    hoverAnimationType: 'tada',
+    constSliderHeight: true,
+    overflowHidden: false,
+}, [
+    ['https://picsum.photos/560/550', '#'],
+    ['https://picsum.photos/561/500', '#'],
+    ['https://picsum.photos/562/550', '#'],
+    ['https://picsum.photos/563/500', '#'],
+    ['https://picsum.photos/564/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery23" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #24.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery24').animateCssSlider({
+    auto: true,
+    autoplayInterval: 7500,
+    animationType: 'slideOutInDown/slideOutInUp',
+    animationTime: 'animate__slower',
+    hoverAnimation: true,
+    hoverAnimationType: 'jello',
+    constSliderHeight: false,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/565/550', '#'],
+    ['https://picsum.photos/566/550', '#'],
+    ['https://picsum.photos/567/550', '#'],
+    ['https://picsum.photos/568/550', '#'],
+    ['https://picsum.photos/569/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery24" class="container my-3"></div>
+
+        <p class="mb-1 font-weight-bold">Example #25.</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery25').animateCssSlider({
+    auto: true,
+    autoplayInterval: 5500,
+    animationType: 'slideOutInLeft/slideOutInRight',
+    animationTime: 'animate__fast',
+    hoverAnimation: true,
+    hoverAnimationType: 'heartBeat',
+    constSliderHeight: true,
+    overflowHidden: true,
+}, [
+    ['https://picsum.photos/550/550', '#'],
+    ['https://picsum.photos/551/550', '#'],
+    ['https://picsum.photos/552/550', '#'],
+    ['https://picsum.photos/553/550', '#'],
+    ['https://picsum.photos/554/550', '#'],
+])
+            </code>
+        </pre>
+
+        <div id="galery25" class="container my-3"></div>
+
+        <h2 class="display-5 bg-primary text-light rounded mb-3">Enjoy it!</h2>
+    </div>
+
+
+</body>
