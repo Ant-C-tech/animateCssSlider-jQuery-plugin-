@@ -177,11 +177,22 @@
             isRun = true
         })
 
+        if (options.control === false) {
+            $container.on('click', () => {
+                clearInterval(slideshowInterval)
+
+                if (isRun) {
+                    return false
+                }
+
+                next()
+                isRun = true
+            })
+        }
+
         $(window).resize(() => {
             if (options.constSliderHeight === false) {
-                $container.eq(counter).on('transitionend', function () {
-                    resizeContainer()
-                })
+                resizeContainer()
             } else {
                 $container.css('height', `${getMaxSlideHeight() + $btnGroup.outerHeight() * 2}px`)
             }
@@ -214,7 +225,7 @@
             $container.children().wrap(`<div class="wrapper-${slideName}"></div>`)
             if (options.control === true) {
                 $container.append(controlElements)
-            }    
+            }
         }
 
 
@@ -225,8 +236,8 @@
                 $container.css('overflow', 'hidden')
             }
             $wrappers.css('position', 'relative')
+            $slides.addClass('img-fluid')
             $slides.css('display', 'block').css('position', 'absolute').css('opacity', '0').css('top', '0')
-            $slides.addClass('rounded')
             $slides.eq(counter).css('position', 'static').css('opacity', '1').css('margin', '0 auto')
             $btnGroup.css('position', 'absolute').css('bottom', '15px').css('left', '50%')
                 .css('transform', 'translateX(-50%)').css('transition', 'all linear 0.5s')

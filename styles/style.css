@@ -1,0 +1,5 @@
+@media screen and (max-width:576px) {
+    #mainpage2, #mainpage3, #mainpage4, #mainpage5, #mainpage6, #mainpage8, #mainpage9, #mainpage10, #mainpage11, #mainpage12,  #mainpage14, #mainpage15, #mainpage16, #mainpage17, #mainpage18, #mainpage20, #mainpage21, #mainpage22, #mainpage23, #mainpage24 {
+        display: none;
+    }
+}

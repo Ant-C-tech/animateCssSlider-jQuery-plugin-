@@ -47,7 +47,8 @@
                             <a class="nav-link text-light" href="index.html">Home</a>
                         </li>
                         <li class="nav-item active font-weight-bold">
-                            <a class="nav-link text-light" href="#">Installation<span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-light" href="#">Installation<span
+                                    class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item  font-weight-bold">
                             <a class="nav-link text-light" href="settings.html">Settings</a>
@@ -63,8 +64,9 @@
             </nav>
         </div>
 
-
         <h5 class="border-top text-primary pt-3 pb-3">Create a beautiful responsive carousel slider.</h5>
+        <h5 class="border-top text-primary pt-3 pb-3"><a href="https://animate.style/">Animate .css library</a></h5>
+
 
         <h2 class="display-5 bg-primary rounded mb-3 text-light">Installation</h2>
         <h5 class="border-top text-primary pt-3 pb-3">We’ll be happy to help you!</h5>
@@ -121,38 +123,53 @@ body {
         <p class="mb-1">For example:</p>
         <pre class="bg-dark text-left rounded px-3">
             <code>
-&#60div id="galery" class="container my-3">&#60/div>
+&#60div id="galery" class="container">&#60/div>
             </code>
         </pre>
 
         <p class="mb-1 font-weight-bold">Slides collection.</p>
-        <p class="mb-1">Prepare some collections of images for every slider you need.</p>
-        <p class="mb-1">It must be an array with slides each of them must be an array too. Every slide contains "src"
-            and "alt" atributes.</p>
-        <p class="mb-1">For example:</p>
+        <p class="mb-1">Prepare some collections of slides for every slider you need.</p>
+        <p class="mb-1">It might be an array with slides.</p>
+        <p class="mb-1">For example, slides will be simple "img":</p>
 
         <pre class="bg-dark text-left rounded px-3">
             <code>
 [
-['https://picsum.photos/650', '#'],
-['https://picsum.photos/651', '#'],
-['https://picsum.photos/652', '#'],
-['https://picsum.photos/553', '#'],
-['https://picsum.photos/654', '#'],
+"&#60img src='https://placem.at/things?w=350&h=190&random=70&txt=0' alt='#'>&#60/img>",
+"&#60img src='https://placem.at/things?w=350&h=190&random=71&txt=0' alt='#'>&#60/img>",
+"&#60img src='https://placem.at/things?w=350&h=190&random=72&txt=0' alt='#'>&#60/img>",
+"&#60img src='https://placem.at/things?w=350&h=190&random=73&txt=0' alt='#'>&#60/img>",
+"&#60img src='https://placem.at/things?w=350&h=190&random=74&txt=0' alt='#'>&#60/img>",
 ]
             </code>
         </pre>
+
+        <p class="mb-1">Or you can include your slides right to your container.</p>
+        <p class="mb-1">Every first child of the container will be your slide.</p>
+        <p class="mb-1">For example, use as slides some "div" with text:</p>
+
+        <pre class="bg-dark text-left rounded px-3">
+            <code>
+&#60div id="galery" class="container">
+    &#60div>Some text&#60/div>
+    &#60div>Some text&#60/div>
+    &#60div>Some text&#60/div>
+    &#60div>Some text&#60/div>
+    &#60div>Some text&#60/div>
+&#60/div>
+            </code>
+        </pre> 
 
         <p class="mb-1">For debugging slider contains default collection:</p>
 
         <pre class="bg-dark text-left rounded px-3">
             <code>
 [
-['img/img1.jpg', '#'],
-['img/img2.jpg', '#'],
-['img/img3.jpg', '#'],
-['img/img4.jpg', '#'],
-['img/img5.jpg', '#'],
+"&#60img src='img/default/img1.jpg' alt='#'>&#60/img>",
+"&#60img src='img/default/img2.jpg' alt='#'>&#60/img>",
+"&#60img src='img/default/img3.jpg' alt='#'>&#60/img>",
+"&#60img src='img/default/img4.jpg' alt='#'>&#60/img>",
+"&#60img src='img/default/img5.jpg' alt='#'>&#60/img>",
 ]
             </code>
         </pre>
@@ -160,12 +177,12 @@ body {
         <p class="mb-1 font-weight-bold">Call the plugin.</p>
         <p class="mb-1">Now call in your app.js file the initializer function for your every slider with the same or
             different settings and all your sliders are ready.</p>
-        <p class="mb-1">Here '#galery' is id of our container (unique for every slider).</p>
-        <p class="mb-1">For example, by default:</p>
+        <p class="mb-1">For example, we used a container with id="galery" (unique for every slider).</p>
+        <p class="mb-1">Slider with default settings:</p>
 
         <pre class="bg-dark text-left rounded px-3">
             <code>
-$('#galery').animateCssSlider({}, [])
+$('#galery').animateCssSlider()
             </code>
         </pre>
 
@@ -174,5 +191,5 @@ $('#galery').animateCssSlider({}, [])
         <h2 class="display-5 bg-primary text-light rounded mb-3">Enjoy it!</h2>
     </div>
 
-       
+
 </body>

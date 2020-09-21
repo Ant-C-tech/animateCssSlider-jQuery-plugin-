@@ -2,6 +2,6 @@
 
 $(function () {
 
-    $('#galery').animateCssSlider({}, [])
+    $('#galery').animateCssSlider()
 
 })
