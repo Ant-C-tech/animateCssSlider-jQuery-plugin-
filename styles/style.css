@@ -1,5 +1,235 @@
+.separator{
+    display: none;
+}
+
 @media screen and (max-width:576px) {
     #mainpage2, #mainpage3, #mainpage4, #mainpage5, #mainpage6, #mainpage8, #mainpage9, #mainpage10, #mainpage11, #mainpage12,  #mainpage14, #mainpage15, #mainpage16, #mainpage17, #mainpage18, #mainpage20, #mainpage21, #mainpage22, #mainpage23, #mainpage24 {
         display: none;
     }
+
+    .separator{
+        display: inline;
+    }
+}
+
+#about {
+    background: rgba(41, 202, 142, 0.1);
+    border-radius: 10px;
+}
+
+.fa-book-reader, .fa-comment-dollar {
+    padding-right: 17.5px;
+}
+
+.fa-book-reader, .fa-graduation-cap, .fa-comment-dollar {
+    font-size: 70px;
+    color: #29ca8e;
+}
+
+.about-form {
+    height: 80%;
+}
+
+.about-formWrapper {
+    width: 100%;
+    height: 570px;
+    border-radius: 50%;
+    background: rgb(48, 43, 43);
+}
+
+.about-formInp {
+    background: rgb(48, 43, 43);
+    outline: none;
+    border: none;
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+}
+
+.btn-aboutForm {
+    width: 150px;
+    border: 1px solid transparent;
+    transition: all linear 0.4s;
+}
+
+.btn-aboutForm:hover {
+    width: 150px;
+    border: 3px solid #8288cb;
+}
+
+@media screen and (max-width:1200px) {
+    .about-formWrapper {
+        width: 600px;
+        height: 600px;
+        margin: 30px auto 0;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .about-formWrapper {
+        width: 500px;
+        height: 500px;
+        margin: 30px auto 0;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .about-formWrapper {
+        width: 400px;
+        height: 400px;
+        margin: 20px auto 0;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .about-formWrapper {
+        width: 100%;
+        border-radius: 5px;
+    }
+    .about-formInp {
+        margin-right: 15px !important;
+        margin-left: 15px !important;
+    }
+}
+
+.team-title {
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-bottom: 3px solid #8288cb;
+}
+
+.card-team {
+    border: none;
+    background: rgba(130, 136, 203, 0.2);
+}
+
+.btn-team {
+    background: transparent;
+    transition: all linear 0.5s;
+}
+
+.btn-team:hover {
+    background: rgba(41, 202, 142, 0.6);
+    ;
+    color: #212121;
+}
+
+.fa-facebook-square, .fa-twitter, .fa-instagram {
+    transition: all linear 0.5s;
+    color: #29ca8e;
+    font-size: 25px;
+}
+
+.btn-team:hover>.fa-facebook-square {
+    color: #8288cb;
+}
+
+.btn-team:hover>.fa-twitter {
+    color: #8288cb;
+}
+
+.btn-team:hover>.fa-instagram {
+    color: #8288cb;
+}
+
+@media screen and (max-width:576px) {
+    .team {
+        padding-bottom: 15px;
+    }
+}
+
+.card-courses {
+    border: none;
+    background: rgba(41, 202, 142, 0.2);
+    border: 1px solid rgba(130, 136, 203, 0.2);
+}
+
+.card-courses-footer {
+    background: #ffffff;
+}
+
+.courses-footerIcon {
+    width: 50px !important;
+    border-radius: 20px;
+}
+
+.courses-price {
+    width: 90px;
+    height: 35px;
+    background: #29ca8e;
+    border-radius: 5px
+}
+
+.courses-price-free {
+    background: #8288cb;
+}
+
+.courses .owl-nav {
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.courses .owl-nav button {
+    outline: none;
+}
+
+.fa-chevron-circle-left {
+    margin-right: 10px;
+    font-size: 30px;
+    color: #29ca8e;
+    transition: color linear 0.5s;
+}
+
+.fa-chevron-circle-left:hover {
+    color: #8288cb;
+}
+
+.fa-chevron-circle-right {
+    margin-left: 10px;
+    font-size: 30px;
+    color: #29ca8e;
+    transition: color linear 0.5s;
+}
+
+.fa-chevron-circle-right:hover {
+    color: #8288cb;
+}
+
+.testimonials {
+    background: rgba(130, 136, 203, 0.2);
+    padding-bottom: 10px;
+}
+
+.testimonials-clienIcon {
+    width: 30%;
+}
+
+.fa-star {
+    color: #29ca8e;
+}
+
+.testimonials .owl-dots {
+    margin: 10px 0 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #29ca8e;
+}
+
+.testimonials .owl-dots button {
+    width: 16px;
+    height: 16px;
+    outline: none;
+    margin-left: 10px;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.testimonials .owl-dots .active {
+    background: #29ca8e;
 }

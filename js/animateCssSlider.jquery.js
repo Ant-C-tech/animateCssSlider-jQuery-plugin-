@@ -406,7 +406,7 @@
             let maxSlideHeight = 0
 
             for (let i = 0; i < $slides.length; i++) {
-                if ($slides.eq(i).outerHeight() > maxSlideHeight) {
+                if ($slides.eq(i).outerHeight() > maxSlideHeight) {                    
                     maxSlideHeight = $slides.eq(i).outerHeight()
                 }
             }

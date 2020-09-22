@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <!-- Font awesome 5 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/style.css">
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -32,7 +36,7 @@
 
     <div class="container text-center mt-3 mb-3 pt-3 rounded bg-light">
         <div class="bg-primary rounded">
-            <h1 class="display-4  pb-1 mb-0 text-light">Animate .css Slider</h1>
+            <h1 class="display-4  pb-1 mb-0 text-light">Animate<span class="separator"> </span>.css Slider</h1>
 
             <nav class="navbar navbar-expand-lg navbar-light ">
                 <button class="navbar-toggler  bg-light mx-auto w-100" type="button" data-toggle="collapse"
@@ -53,10 +57,11 @@
                             <a class="nav-link text-light" href="settings.html">Settings</a>
                         </li>
                         <li class="nav-item  font-weight-bold">
-                            <a class="nav-link text-light" href="settings.html">Examples 1</a>
+                            <a class="nav-link text-light" href="examples1.html">Examples 1</a>
                         </li>
                         <li class="nav-item active  font-weight-bold">
-                            <a class="nav-link text-light" href="#">Examples 2 <span class="sr-only">(current)</span></a>
+                            <a class="nav-link text-light" href="#">Examples 2 <span
+                                    class="sr-only">(current)</span></a>
                         </li>
                     </ul>
                 </div>
@@ -71,43 +76,703 @@
         <h2 class="display-5 bg-primary text-light rounded mb-3">Examples 2</h2>
         <h5 class="border-top text-primary pt-3 pb-3">We’ll be happy to show you!</h5>
 
-        <p class="mb-1 font-weight-bold">Example #26.</p>
+        <!-- =============================== Example #2.1 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.1</p>
         <p class="mb-1">Initialization:</p>
 
         <pre class="bg-dark text-light text-left rounded px-3">
             <code>
-    
+$('#galery26').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 7500,
+    constSliderHeight: true,
+})    
             </code>
         </pre>
 
         <div id="galery26" class="container my-3">
 
-            <div class="col-lg-6 mx-auto">
-                <form class="form-signin" pb-autologin="true" autocomplete="off">
-                    <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt=""
-                        width="72" height="72">
-                    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
-                        autofocus="" pb-role="username">
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required=""
-                        pb-role="password">
-                    <div class="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img1.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Mark Willson</h5>
+                        <p class="card-text font">Learning is fun!</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit" pb-role="submit">Sign in</button>
-                    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
-                    <passwordboxicon pb-icon="username" icon-type="main"
-                        style="display: none; position: absolute; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAYAAAAI0W+oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzU4NUJBRkU1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzU4NUJBRkQ1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA5M0ZFMjdERDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA5M0ZFMjdFRDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MHuEgAAAAWtJREFUeNq8VCFMxEAQ3DZ1RRdfSUBTcg6JwdfjeQsaJCXYDxZ03/+7BtD/BsMLDAFdXebu9r7bpnxLSZhkvr9719vu7uxRVVXUiUlxDUbCjo2vA/qMPvr0M17AI2En7BsFX3xxBIZi7Qk8FvYh+9z+sJHx4EBEMXiHlw+MlalP/M7E+ox9xHvu+Z1B8HT9PM+r+0B0CU5x6DP7FAcu2NYlPAOv4HtzPfpdIFcSIs2Sgy7Bd/DEHO7WMlVKMfRii+rOwVTYqfGNVF2wkbJUW6ZyPCNTwho5Z6j3n7I4HC76Egq4/l0bS5b0XMi75P05B7a46S9dsGXt0WQwKXbwfAVT7tEotFWnG637sDJfbUv0Be6Ba/jm7NsHb50ghojBb1wxdjZWXBo3pB/ggkvnyrbmmYvHDGxomuqC2Ox2zazYeYk3N0emHoTUB6HuUaaWrbWkceXY/7U4eFjHZEQdgRatSzb5kxj+A98CDADG3MBsPyzvawAAAABJRU5ErkJggg==&quot;) right center no-repeat; width: 30px; height: 45px; z-index: 2; visibility: hidden; top: 351.506px; left: 777.727px;">
-                    </passwordboxicon>
-                    <passwordboxicon pb-icon="password" icon-type="main"
-                        style="display: none; position: absolute; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAYAAAAI0W+oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzU4NUJBRkU1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzU4NUJBRkQ1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA5M0ZFMjdERDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA5M0ZFMjdFRDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MHuEgAAAAWtJREFUeNq8VCFMxEAQ3DZ1RRdfSUBTcg6JwdfjeQsaJCXYDxZ03/+7BtD/BsMLDAFdXebu9r7bpnxLSZhkvr9719vu7uxRVVXUiUlxDUbCjo2vA/qMPvr0M17AI2En7BsFX3xxBIZi7Qk8FvYh+9z+sJHx4EBEMXiHlw+MlalP/M7E+ox9xHvu+Z1B8HT9PM+r+0B0CU5x6DP7FAcu2NYlPAOv4HtzPfpdIFcSIs2Sgy7Bd/DEHO7WMlVKMfRii+rOwVTYqfGNVF2wkbJUW6ZyPCNTwho5Z6j3n7I4HC76Egq4/l0bS5b0XMi75P05B7a46S9dsGXt0WQwKXbwfAVT7tEotFWnG637sDJfbUv0Be6Ba/jm7NsHb50ghojBb1wxdjZWXBo3pB/ggkvnyrbmmYvHDGxomuqC2Ox2zazYeYk3N0emHoTUB6HuUaaWrbWkceXY/7U4eFjHZEQdgRatSzb5kxj+A98CDADG3MBsPyzvawAAAABJRU5ErkJggg==&quot;) right center no-repeat; width: 30px; height: 45px; z-index: 3; visibility: hidden; top: 396.136px; left: 777.727px;">
-                    </passwordboxicon>
-                </form>
+                </div>
             </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img2.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Ali Pazani</h5>
+                        <p class="card-text">I like online courses.</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img3.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Andrea Piacquadio</h5>
+                        <p class="card-text">Education is the key.</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img4.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Cora Johnson</h5>
+                        <p class="card-text">I love teaching!</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /galery26 -->
+
+        <!-- =============================== Example #2.2 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.2</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery27').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 7500,
+    animationType: 'fadeOutInDown/fadeOutInUp',
+    animationTime: 'animate__slower',
+    constSliderHeight: true,
+})
+            </code>
+        </pre>
+
+        <div id="galery27" class="container my-3">
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img4.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Marketing Communication</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus nesciunt provident
+                        fugiat obcaecati at. Molestiae hic impedit, nobis debitis animi dolore nulla veniam
+                        excepturi voluptate amet placeat autem mollitia corrupti.
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico4.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Cora Johnson</p>
+                    </div>
+                    <div
+                        class="courses-price courses-price-free font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">Free</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img1.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Summer Kids</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit debitis assumenda dolorum
+                        ducimus dolorem saepe, tempore, eligendi quam illum officiis deleniti ullam, expedita
+                        officia corrupti quia nihil ea tempora laudantium.
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico3.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Andrea Piacquadio</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 45</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img3.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Business & Management</h5>
+                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
+                        doloribus libero iure nobis quaerat sapiente vitae fugiat dolore labore quis iusto
+                        officiis sed vel repellat, possimus dolorem voluptatibus nisi eos.Provident
+                        doloribus libero iure nobis quaerat.
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico1.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Mark Willson</p>
+                    </div>
+                    <div
+                        class="courses-price courses-price-free font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">Free</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /galery27 -->
+
+        <!-- =============================== Example #2.3 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.3</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery28').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 4000,
+    animationType: 'fadeOutInDownBig/fadeOutInUpBig',
+    animationTime: 'animate__fast',
+    constSliderHeight: true,
+})
+            </code>
+        </pre>
+
+        <div id="galery28" class="container my-3">
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img2.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Graphic & Web Design</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                        harum tenetur commodisquam praesentium
+                        cupiditate consequatur odio molestiae? Animi natus dolorem qui laboriosam quia!
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico2.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Ali Pazani</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img5.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Art of Business Negotiations</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat sit molestiae tenetur
+                        ullam expedita maxime iusto eveniet. Labore hic, delectus inventore!
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico1.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Mark Willson</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 50</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img6.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Social Media Management</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci perferendis
+                        officiis recusandae dolor ipsam dolorum dolores. Qui eos eaque consectetur molestiae,
+                        doloribus aspernatur nam excepturi ea atque beatae iste? Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Molestias adipisci perferendis
+                        officiis recusandae dolor ipsam dolorum dolores.
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico2.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Ali Pazani</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 25</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /galery28 -->
+
+
+        <!-- =============================== Example #2.4 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.4</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery29').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 4000,
+    animationType: 'fadeOutInLeft/fadeOutInRight',
+    animationTime: 'animate__faster',
+    constSliderHeight: true,
+})
+            </code>
+        </pre>
+
+        <div id="galery29" class="container my-3">
+
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Danger card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Info card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+        </div><!-- /galery29 -->
+
+        <!-- =============================== Example #2.5 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.5</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery30').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 4500,
+    animationType: 'fadeOutInLeftBig/fadeOutInRightBig',
+    animationTime: 'animate__faster',
+    hoverAnimation: true,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: true,
+})
+            </code>
+        </pre>
+
+        <div id="galery30" class="container my-3">
+
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-secondary">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-success">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-danger">
+                    <h5 class="card-title">Danger card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-warning">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Info card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+        </div><!-- /galery30 -->
+
+        <!-- =============================== Example #2.6 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.6</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery31').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 5500,
+    animationType: 'fadeOutInLeftTop/fadeOutInRightBottom',
+    animationTime: 'animate__slow',
+    constSliderHeight: true,
+})
+            </code>
+        </pre>
+
+        <div id="galery31" class="container my-3">
+
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-success">Header</div>
+                <div class="card-body text-success">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <div class="card-footer bg-transparent border-success">Footer</div>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Example label</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput"
+                        placeholder="Example input placeholder">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Another label</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Another input placeholder">
+                </div>
+            </form>
+
+            <form>
+                <div class="form-group row">
+                    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control form-control-sm" id="colFormLabelSm"
+                            placeholder="col-form-label-sm">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control form-control-lg" id="colFormLabelLg"
+                            placeholder="col-form-label-lg">
+                    </div>
+                </div>
+            </form>
+
+
+        </div><!-- /galery31 -->
+
+        <!-- =============================== Example #2.7 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.7</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery32').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 4000,
+    animationType: 'fadeOutInLeftBottom/fadeOutInRightTop',
+    constSliderHeight: true,
+})
+            </code>
+        </pre>
+
+        <div id="galery32" class="container my-3">
+
+            <div class="row about-item d-flex align-items-center">
+                <div class="col-xl-2">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+
+                <div class="about-itemText col-xl-10 mt-2">
+                    <h5 class="font-weight-bold text-dark font">Professional trainers</h5>
+                    <p class="font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae omnis
+                        nesciunt delectus
+                        maiores odit minus at recusandae esse ut dolore ipsam, quis voluptatum, quam nobis repellat!
+                        Cupiditate ab alias aspernatur.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row about-item d-flex align-items-center font">
+                <div class="col-xl-2">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <div class="about-itemText col-xl-10 mt-2">
+                    <h5 class="font-weight-bold text-dark font">International Certification</h5>
+                    <p class="font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae omnis
+                        nesciunt delectus
+                        maiores odit minus at recusandae esse ut dolore ipsam, quis voluptatum, quam nobis repellat!
+                        Cupiditate ab alias aspernatur.
+                    </p>
+                </div>
+            </div>
+
+            <div class=" row about-item d-flex align-items-center font">
+                <div class="col-xl-2">
+                    <i class="fas fa-comment-dollar"></i>
+                </div>
+                <div class="about-itemText col-xl-10 mt-2">
+                    <h5 class="font-weight-bold text-dark font">Free for 3 months</h5>
+                    <p class="font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae omnis
+                        nesciunt delectus
+                        maiores odit minus at recusandae esse ut dolore ipsam, quis voluptatum, quam nobis repellat!
+                        Cupiditate ab alias aspernatur.
+                    </p>
+                </div>
+            </div>
+
+        </div><!-- /galery32 -->
+
+        <!-- =============================== Example #2.8 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.8</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+                <code>
+$('#galery33').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 4500,
+    animationType: 'backOutInDown/backOutInUp',
+    constSliderHeight: true,
+})
+                </code>
+            </pre>
+
+        <div id="galery33" class="container my-3">
+
+            <div class="card card-testimonials mr-4 ml-4">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center mb-3">
+                        <div class="col-md-6">
+                            <img src="img/testimonials/img1.jpg" class="card-img" alt="#">
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="card-title font text-dark font-weight-bold">Alessia Dudley</h5>
+                            <p class="card-text text-uppercase">Real Estate Agent</p>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        The teachers are experts in their subjects and their excitement about the material
+                        creates challenging and engaging classes for the students. But make no mistake, these
+                        are difficult classes!
+                    </p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="card card-testimonials mr-4 ml-4">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center mb-3">
+                        <div class="col-md-6">
+                            <img src="img/testimonials/img2.jpg" class="card-img" alt="#">
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="card-title font text-dark font-weight-bold">Issac Wade</h5>
+                            <p class="card-text text-uppercase">Bus Driver</p>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        It's been a wonderful experience, everything I wanted for my kids' education and the
+                        focus on their individual strengths make me so happy to see them grow and develop as I
+                        would want for them. Big difference from our public school experiences.
+                    </p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+            <div class="card card-testimonials mr-4 ml-4">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center mb-3">
+                        <div class="col-md-6">
+                            <img src="img/testimonials/img3.jpg" class="card-img" alt="#">
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="card-title font text-dark font-weight-bold">Adrienne Garza</h5>
+                            <p class="card-text text-uppercase">Recreational Therapist</p>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Incredible teachers that are invested in the students intellectual development. CORE
+                        curriculum is just one of the unique features of the school.
+                    </p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+        </div><!-- /galery33 -->
+
+        <!-- =============================== Example #2.9 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.9</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+                <code>
+$('#galery34').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 4500,
+    animationType: 'backOutInLeft/backOutInRight',
+    hoverAnimation: true,
+    hoverAnimationType: 'bounce',
+    constSliderHeight: true,
+    overflowHidden: false,
+})
+                </code>
+            </pre>
+
+        <div id="galery34" class="container my-3">
 
             <div class="col-lg-6 mx-auto">
                 <div class="my-3 p-3 bg-white rounded box-shadow">
@@ -149,6 +814,33 @@
                         <a href="#">All updates</a>
                     </small>
                 </div>
+            </div>
+
+            <div class="col-lg-6 mx-auto">
+                <form class="form-signin" pb-autologin="true" autocomplete="off">
+                    <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt=""
+                        width="72" height="72">
+                    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
+                        autofocus="" pb-role="username">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required=""
+                        pb-role="password">
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" pb-role="submit">Sign in</button>
+                    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+                    <passwordboxicon pb-icon="username" icon-type="main"
+                        style="display: none; position: absolute; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAYAAAAI0W+oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzU4NUJBRkU1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzU4NUJBRkQ1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA5M0ZFMjdERDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA5M0ZFMjdFRDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MHuEgAAAAWtJREFUeNq8VCFMxEAQ3DZ1RRdfSUBTcg6JwdfjeQsaJCXYDxZ03/+7BtD/BsMLDAFdXebu9r7bpnxLSZhkvr9719vu7uxRVVXUiUlxDUbCjo2vA/qMPvr0M17AI2En7BsFX3xxBIZi7Qk8FvYh+9z+sJHx4EBEMXiHlw+MlalP/M7E+ox9xHvu+Z1B8HT9PM+r+0B0CU5x6DP7FAcu2NYlPAOv4HtzPfpdIFcSIs2Sgy7Bd/DEHO7WMlVKMfRii+rOwVTYqfGNVF2wkbJUW6ZyPCNTwho5Z6j3n7I4HC76Egq4/l0bS5b0XMi75P05B7a46S9dsGXt0WQwKXbwfAVT7tEotFWnG637sDJfbUv0Be6Ba/jm7NsHb50ghojBb1wxdjZWXBo3pB/ggkvnyrbmmYvHDGxomuqC2Ox2zazYeYk3N0emHoTUB6HuUaaWrbWkceXY/7U4eFjHZEQdgRatSzb5kxj+A98CDADG3MBsPyzvawAAAABJRU5ErkJggg==&quot;) right center no-repeat; width: 30px; height: 45px; z-index: 2; visibility: hidden; top: 351.506px; left: 777.727px;">
+                    </passwordboxicon>
+                    <passwordboxicon pb-icon="password" icon-type="main"
+                        style="display: none; position: absolute; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAYAAAAI0W+oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzU4NUJBRkU1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzU4NUJBRkQ1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA5M0ZFMjdERDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA5M0ZFMjdFRDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MHuEgAAAAWtJREFUeNq8VCFMxEAQ3DZ1RRdfSUBTcg6JwdfjeQsaJCXYDxZ03/+7BtD/BsMLDAFdXebu9r7bpnxLSZhkvr9719vu7uxRVVXUiUlxDUbCjo2vA/qMPvr0M17AI2En7BsFX3xxBIZi7Qk8FvYh+9z+sJHx4EBEMXiHlw+MlalP/M7E+ox9xHvu+Z1B8HT9PM+r+0B0CU5x6DP7FAcu2NYlPAOv4HtzPfpdIFcSIs2Sgy7Bd/DEHO7WMlVKMfRii+rOwVTYqfGNVF2wkbJUW6ZyPCNTwho5Z6j3n7I4HC76Egq4/l0bS5b0XMi75P05B7a46S9dsGXt0WQwKXbwfAVT7tEotFWnG637sDJfbUv0Be6Ba/jm7NsHb50ghojBb1wxdjZWXBo3pB/ggkvnyrbmmYvHDGxomuqC2Ox2zazYeYk3N0emHoTUB6HuUaaWrbWkceXY/7U4eFjHZEQdgRatSzb5kxj+A98CDADG3MBsPyzvawAAAABJRU5ErkJggg==&quot;) right center no-repeat; width: 30px; height: 45px; z-index: 3; visibility: hidden; top: 396.136px; left: 777.727px;">
+                    </passwordboxicon>
+                </form>
             </div>
 
             <div class="col-lg-6 mx-auto">
@@ -200,112 +892,1604 @@
 
             </div>
 
-            <div>
-                <div class="row">
+        </div><!-- /galery34 -->
+
+        <!-- =============================== Example #2.10 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.10</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+                <code>
+$('#galery35').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 5500,
+    animationType: 'bounceOut/bounceIn',
+    animationTime: 'animate__slow',
+    constSliderHeight: true,
+    overflowHidden: false,
+})
+                </code>
+            </pre>
+
+        <div id="galery35" class="container my-3">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
                     <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="https://picsum.photos/300/300"
-                                alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
-                                src="https://picsum.photos/300/300" data-holder-rendered="true">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
+                        <img class="card-img-top" data-src="https://placem.at/places" alt="Thumbnail [100%x225]"
+                            style="height: 225px; width: 100%; display: block;" src="https://placem.at/places"
+                            data-holder-rendered="true">
                     </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="https://picsum.photos/301/300"
-                                alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
-                                src="https://picsum.photos/301/300" data-holder-rendered="true">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" data-src="https://picsum.photos/302/300"
-                                alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
-                                src="https://picsum.photos/302/300" data-holder-rendered="true">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="card bg-dark text-white">
+                <img class="card-img-top" data-src="https://placem.at/places" alt="Thumbnail [100%x225]"
+                    style="height: 225px; width: 100%; display: block;" src="https://placem.at/places"
+                    data-holder-rendered="true">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+            </div>
+
+        </div><!-- /galery35 -->
+
+        <!-- =============================== Example #2.11 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.11</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+                <code>
+$('#galery36').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 4500,
+    animationType: 'bounceOutInDown/bounceOutInUp',
+    constSliderHeight: true,
+})
+                </code>
+            </pre>
+
+        <div id="galery36" class="container my-3">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <div class="card-footer">
+                    Card footer
+                </div>
+            </div>
+
             <div>
-                <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                    <h1 class="display-6">Pricing</h1>
-                    <p class="lead">Quickly build an effective pricing table for your potential customers with this
-                        Bootstrap example.
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Well done!</h4>
+                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a
+                        bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                    <hr>
+                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
                     </p>
                 </div>
-                <div class="container">
-                    <div class="card-deck mb-3 text-center">
-                        <div class="card mb-4 box-shadow">
-                            <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">Free</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
-                                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for
-                                    free</button>
-                            </div>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Featured
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+
+        </div><!-- /galery36 -->
+
+        <!-- =============================== Example #2.12 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.12</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+                <code>
+$('#galery37').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 7500,
+    animationType: 'bounceOutInLeft/bounceOutInRight',
+    animationTime: 'animate__slow',
+    hoverAnimation: true,
+    hoverAnimationType: 'rubberBand',
+    constSliderHeight: true,
+})
+                </code>
+            </pre>
+
+        <div id="galery37" class="container my-3">
+
+            <div class="card card-testimonials mr-4 ml-4">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center mb-3">
+                        <div class="col-md-6">
+                            <img src="img/testimonials/img4.jpg" class="card-img" alt="#">
                         </div>
-                        <div class="card mb-4 box-shadow">
-                            <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">Pro</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small>
-                                </h1>
-                                <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
-                            </div>
+                        <div class="col-md-6">
+                            <h5 class="card-title font text-dark font-weight-bold">Dawid Redman</h5>
+                            <p class="card-text text-uppercase">Budget analyst</p>
                         </div>
-                        <div class="card mb-4 box-shadow">
-                            <div class="card-header">
-                                <h4 class="my-0 font-weight-normal">Enterprise</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small>
-                                </h1>
-                                <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
-                            </div>
+                    </div>
+                    <p class="card-text">
+                        This school allowed me to push myself beyond what I thought I could even do and I have
+                        been able to make life-changing friendships with people around the world.
+                    </p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+
+            <div class="card card-testimonials mr-4 ml-4">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center mb-3">
+                        <div class="col-md-6">
+                            <img src="img/testimonials/img5.jpg" class="card-img" alt="#">
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="card-title font text-dark font-weight-bold">Misty Bain</h5>
+                            <p class="card-text text-uppercase">Architect</p>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        I came last year as a high school freshman. It has been the most incredible
+                        experience of my life. I am happier than I ever could have imagined -- I have great
+                        friends who are not only super smart but also really compassionate people
+                    </p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+
+            <div class="card card-testimonials mr-4 ml-4">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center mb-3">
+                        <div class="col-md-6">
+                            <img src="img/testimonials/img6.jpg" class="card-img" alt="#">
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="card-title font text-dark font-weight-bold">Hester Tierney</h5>
+                            <p class="card-text text-uppercase">Accountant</p>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        I love this school. It's not for everyone, given it's online. But even as an extrovert,
+                        I've found ways to still connect not only to the school community but also to others
+                        outside of school. Really pushes you to love learning and not just memorize facts, and
+                        it requires a lot of self-motivation and independence.
+                    </p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+        </div><!-- /galery37 -->
+
+        <!-- =============================== Example #2.13 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.13</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+                 <code>
+$('#galery38').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 6000,
+    animationType: 'flipOutX/flipInX',
+    animationTime: 'animate__slow',
+    constSliderHeight: true,
+})
+                 </code>
+             </pre>
+
+        <div id="galery38" class="container my-3">
+
+            <div class="row">
+                <div class="card border border-secondary mb-4 shadow col-lg-6 col-xs-12 mx-auto">
+                    <img class="card-img-top mt-2" src="#" srcset="img/photo-1.jpg" alt="some photo">
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam
+                            voluptatem itaque.</p>
+                        <a href="https://www.instagram.com/" class="btn btn-secondary" target="_blank">Read
+                            more...</a>
+                    </div>
+                    <div class="card-footer text-muted text-center">
+                        2 days ago
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="card border border-secondary mb-4 shadow col-lg-6 col-xs-12 mx-auto">
+                    <img class="card-img-top mt-2" src="#" srcset="img/photo-2.jpg" alt="some photo">
+                    <div class="card-body">
+                        <h5 class="card-title">Lorem sit.</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum
+                            voluptatum repellendus.</p>
+                        <a href="https://www.instagram.com/" class="btn btn-secondary" target="_blank">Read
+                            more...</a>
+                    </div>
+                    <div class="card-footer text-muted text-center">
+                        3 days ago
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card border border-secondary mb-4 shadow col-lg-6 col-xs-12 mx-auto">
+                    <img class="card-img-top mt-2" src="#" srcset="img/photo-3.jpg" alt="some photo">
+                    <div class="card-body">
+                        <h5 class="card-title">Amet consectetur.</h5>
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam eius
+                            deleniti repellat.</p>
+                        <a href="https://www.instagram.com/" class="btn btn-secondary" target="_blank">Read
+                            more...</a>
+                    </div>
+                    <div class="card-footer text-muted text-center">
+                        7 days ago
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /galery38 -->
+
+        <!-- =============================== Example #2.14 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.14</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+                    <code>
+$('#galery39').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 6500,
+    animationType: 'flipOutY/flipInY',
+    animationTime: 'animate__slow',
+    constSliderHeight: true,
+})
+                    </code>
+                </pre>
+
+        <div id="galery39" class="container my-3">
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img1.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Mark Willson</h5>
+                        <p class="card-text font">Learning is fun!</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img2.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Ali Pazani</h5>
+                        <p class="card-text">I like online courses.</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img3.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Andrea Piacquadio</h5>
+                        <p class="card-text">Education is the key.</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img4.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Cora Johnson</h5>
+                        <p class="card-text">I love teaching!</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /galery39 -->
+
+        <!-- =============================== Example #2.15 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.15</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery40').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 5500,
+    animationType: 'lightSpeedOutInLeft/lightSpeedOutInRight',
+    hoverAnimation: true,
+    hoverAnimationType: 'shakeX',
+    overflowHidden: false,
+    constSliderHeight: true,
+    control: false,
+})
+            </code>
+        </pre>
+
+        <div id="galery40" class="container my-3">
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img4.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Marketing Communication</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus nesciunt provident
+                        fugiat obcaecati at. Molestiae hic impedit, nobis debitis animi dolore nulla veniam
+                        excepturi voluptate amet placeat autem mollitia corrupti.
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico4.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Cora Johnson</p>
+                    </div>
+                    <div
+                        class="courses-price courses-price-free font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">Free</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img1.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Summer Kids</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit debitis assumenda dolorum
+                        ducimus dolorem saepe, tempore, eligendi quam illum officiis deleniti ullam, expedita
+                        officia corrupti quia nihil ea tempora laudantium.
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico3.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Andrea Piacquadio</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 45</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img3.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Business & Management</h5>
+                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident
+                        doloribus libero iure nobis quaerat sapiente vitae fugiat dolore labore quis iusto
+                        officiis sed vel repellat, possimus dolorem voluptatibus nisi eos.Provident
+                        doloribus libero iure nobis quaerat.
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico1.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Mark Willson</p>
+                    </div>
+                    <div
+                        class="courses-price courses-price-free font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">Free</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /galery40 -->
+
+        <!-- =============================== Example #2.16 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.16</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery41').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 5500,
+    animationType: 'rotateOut/rotateIn',
+    constSliderHeight: true,
+})
+            </code>
+        </pre>
+
+        <div id="galery41" class="container my-3">
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img2.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Graphic & Web Design</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                        harum tenetur commodisquam praesentium
+                        cupiditate consequatur odio molestiae? Animi natus dolorem qui laboriosam quia!
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico2.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Ali Pazani</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img5.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Art of Business Negotiations</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat sit molestiae tenetur
+                        ullam expedita maxime iusto eveniet. Labore hic, delectus inventore!
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico1.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Mark Willson</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 50</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img6.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Social Media Management</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci perferendis
+                        officiis recusandae dolor ipsam dolorum dolores. Qui eos eaque consectetur molestiae,
+                        doloribus aspernatur nam excepturi ea atque beatae iste? Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Molestias adipisci perferendis
+                        officiis recusandae dolor ipsam dolorum dolores.
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico2.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Ali Pazani</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 25</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /galery41 -->
+
+        <!-- =============================== Example #2.17 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.17</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery42').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 5000,
+    animationType: 'rotateOutInDownLeft/rotateOutInUpLeft',
+    hoverAnimation: true,
+    hoverAnimationType: 'shakeY',
+    constSliderHeight: true,
+    overflowHidden: false,
+})
+            </code>
+        </pre>
+
+        <div id="galery42" class="container my-3">
+
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Danger card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Info card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+        </div><!-- /galery42 -->
+
+        <!-- =============================== Example #2.18 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.18</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery43').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 5000,
+    animationType: 'rotateOutInDownRight/rotateOutInUpRight',
+    constSliderHeight: true,
+    control: false,
+})
+            </code>
+        </pre>
+
+        <div id="galery43" class="container my-3">
+
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-secondary">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-success">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-danger">
+                    <h5 class="card-title">Danger card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-warning">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Info card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+        </div><!-- /galery43 -->
+
+        <!-- =============================== Example #2.19 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.19</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery44').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 6500,
+    animationType: 'hingeOut/fadeIn',
+    animationTime: 'animate__slower',
+    constSliderHeight: true,
+})
+            </code>
+        </pre>
+
+        <div id="galery44" class="container my-3">
+
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-secondary">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-success">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-danger">
+                    <h5 class="card-title">Danger card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-warning">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-info">
+                    <h5 class="card-title">Info card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body text-dark">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+
+        </div><!-- /galery44 -->
+
+        <!-- =============================== Example #2.20 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.20</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery45').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 6000,
+    animationType: 'bounceOut/jackInTheBox',
+    animationTime: 'animate__slow',
+    hoverAnimation: true,
+    hoverAnimationType: 'headShake',
+    constSliderHeight: true,
+    overflowHidden: false,
+})
+            </code>
+        </pre>
+
+        <div id="galery45" class="container my-3">
+
+            <div class="card border-success mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-success">Header</div>
+                <div class="card-body text-success">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <div class="card-footer bg-transparent border-success">Footer</div>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Example label</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput"
+                        placeholder="Example input placeholder">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Another label</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Another input placeholder">
+                </div>
+            </form>
+
+            <form>
+                <div class="form-group row">
+                    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control form-control-sm" id="colFormLabelSm"
+                            placeholder="col-form-label-sm">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control form-control-lg" id="colFormLabelLg"
+                            placeholder="col-form-label-lg">
+                    </div>
+                </div>
+            </form>
+
+        </div><!-- /galery45 -->
+
+        <!-- =============================== Example #2.21 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.21</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery46').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 5000,
+    animationType: 'rollOut/rollIn',
+    hoverAnimation: true,
+    hoverAnimationType: 'swing',
+    constSliderHeight: true,
+    overflowHidden: false,
+})
+            </code>
+        </pre>
+
+        <div id="galery46" class="container my-3">
+
+            <div class="card card-testimonials mr-4 ml-4">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center mb-3">
+                        <div class="col-md-6">
+                            <img src="img/testimonials/img1.jpg" class="card-img" alt="#">
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="card-title font text-dark font-weight-bold">Alessia Dudley</h5>
+                            <p class="card-text text-uppercase">Real Estate Agent</p>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        The teachers are experts in their subjects and their excitement about the material
+                        creates challenging and engaging classes for the students. But make no mistake, these
+                        are difficult classes!
+                    </p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="card card-testimonials mr-4 ml-4">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center mb-3">
+                        <div class="col-md-6">
+                            <img src="img/testimonials/img2.jpg" class="card-img" alt="#">
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="card-title font text-dark font-weight-bold">Issac Wade</h5>
+                            <p class="card-text text-uppercase">Bus Driver</p>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        It's been a wonderful experience, everything I wanted for my kids' education and the
+                        focus on their individual strengths make me so happy to see them grow and develop as I
+                        would want for them. Big difference from our public school experiences.
+                    </p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+            <div class="card card-testimonials mr-4 ml-4">
+                <div class="card-body">
+                    <div class="row d-flex align-items-center mb-3">
+                        <div class="col-md-6">
+                            <img src="img/testimonials/img3.jpg" class="card-img" alt="#">
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="card-title font text-dark font-weight-bold">Adrienne Garza</h5>
+                            <p class="card-text text-uppercase">Recreational Therapist</p>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Incredible teachers that are invested in the students intellectual development. CORE
+                        curriculum is just one of the unique features of the school.
+                    </p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+        </div><!-- /galery46 -->
+
+        <!-- =============================== Example #2.22 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.22</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery47').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 4500,
+    animationType: 'zoomOut/zoomIn',
+    animationTime: 'animate__fast',
+    constSliderHeight: true,
+})            
+            </code>
+        </pre>
+
+        <div id="galery47" class="container my-3">
+
+            <div class="col-lg-6 mx-auto">
+                <div class="my-3 p-3 bg-white rounded box-shadow">
+                    <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&amp;bg=007bff&amp;fg=007bff&amp;size=1" alt="32x32"
+                            class="mr-2 rounded" style="width: 32px; height: 32px;"
+                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174ab561857%20text%20%7B%20fill%3A%23007bff%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174ab561857%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23007bff%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.6640625%22%20y%3D%2217.096875%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                            data-holder-rendered="true">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">@username</strong>
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                        </p>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&amp;bg=e83e8c&amp;fg=e83e8c&amp;size=1" alt="32x32"
+                            class="mr-2 rounded"
+                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174ab56185f%20text%20%7B%20fill%3A%23e83e8c%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174ab56185f%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23e83e8c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.6640625%22%20y%3D%2217.096875%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                            data-holder-rendered="true" style="width: 32px; height: 32px;">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">@username</strong>
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                        </p>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&amp;bg=6f42c1&amp;fg=6f42c1&amp;size=1" alt="32x32"
+                            class="mr-2 rounded"
+                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174ab561862%20text%20%7B%20fill%3A%236f42c1%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174ab561862%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%236f42c1%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.6640625%22%20y%3D%2217.096875%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                            data-holder-rendered="true" style="width: 32px; height: 32px;">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">@username</strong>
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+                            tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                        </p>
+                    </div>
+                    <small class="d-block text-right mt-3">
+                        <a href="#">All updates</a>
+                    </small>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mx-auto">
+                <form class="form-signin" pb-autologin="true" autocomplete="off">
+                    <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt=""
+                        width="72" height="72">
+                    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
+                        autofocus="" pb-role="username">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required=""
+                        pb-role="password">
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" pb-role="submit">Sign in</button>
+                    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+                    <passwordboxicon pb-icon="username" icon-type="main"
+                        style="display: none; position: absolute; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAYAAAAI0W+oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzU4NUJBRkU1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzU4NUJBRkQ1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA5M0ZFMjdERDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA5M0ZFMjdFRDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MHuEgAAAAWtJREFUeNq8VCFMxEAQ3DZ1RRdfSUBTcg6JwdfjeQsaJCXYDxZ03/+7BtD/BsMLDAFdXebu9r7bpnxLSZhkvr9719vu7uxRVVXUiUlxDUbCjo2vA/qMPvr0M17AI2En7BsFX3xxBIZi7Qk8FvYh+9z+sJHx4EBEMXiHlw+MlalP/M7E+ox9xHvu+Z1B8HT9PM+r+0B0CU5x6DP7FAcu2NYlPAOv4HtzPfpdIFcSIs2Sgy7Bd/DEHO7WMlVKMfRii+rOwVTYqfGNVF2wkbJUW6ZyPCNTwho5Z6j3n7I4HC76Egq4/l0bS5b0XMi75P05B7a46S9dsGXt0WQwKXbwfAVT7tEotFWnG637sDJfbUv0Be6Ba/jm7NsHb50ghojBb1wxdjZWXBo3pB/ggkvnyrbmmYvHDGxomuqC2Ox2zazYeYk3N0emHoTUB6HuUaaWrbWkceXY/7U4eFjHZEQdgRatSzb5kxj+A98CDADG3MBsPyzvawAAAABJRU5ErkJggg==&quot;) right center no-repeat; width: 30px; height: 45px; z-index: 2; visibility: hidden; top: 351.506px; left: 777.727px;">
+                    </passwordboxicon>
+                    <passwordboxicon pb-icon="password" icon-type="main"
+                        style="display: none; position: absolute; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAYAAAAI0W+oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzU4NUJBRkU1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzU4NUJBRkQ1QkVFMTFFNDkyRkVDMDk0Nzk5RDFBMDQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA5M0ZFMjdERDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA5M0ZFMjdFRDI5NDExRTE5Njc0OTU4Rjk3NzgwODJEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MHuEgAAAAWtJREFUeNq8VCFMxEAQ3DZ1RRdfSUBTcg6JwdfjeQsaJCXYDxZ03/+7BtD/BsMLDAFdXebu9r7bpnxLSZhkvr9719vu7uxRVVXUiUlxDUbCjo2vA/qMPvr0M17AI2En7BsFX3xxBIZi7Qk8FvYh+9z+sJHx4EBEMXiHlw+MlalP/M7E+ox9xHvu+Z1B8HT9PM+r+0B0CU5x6DP7FAcu2NYlPAOv4HtzPfpdIFcSIs2Sgy7Bd/DEHO7WMlVKMfRii+rOwVTYqfGNVF2wkbJUW6ZyPCNTwho5Z6j3n7I4HC76Egq4/l0bS5b0XMi75P05B7a46S9dsGXt0WQwKXbwfAVT7tEotFWnG637sDJfbUv0Be6Ba/jm7NsHb50ghojBb1wxdjZWXBo3pB/ggkvnyrbmmYvHDGxomuqC2Ox2zazYeYk3N0emHoTUB6HuUaaWrbWkceXY/7U4eFjHZEQdgRatSzb5kxj+A98CDADG3MBsPyzvawAAAABJRU5ErkJggg==&quot;) right center no-repeat; width: 30px; height: 45px; z-index: 3; visibility: hidden; top: 396.136px; left: 777.727px;">
+                    </passwordboxicon>
+                </form>
+            </div>
+
+            <div class="col-lg-6 mx-auto">
+                <div class="my-3 p-3 bg-white rounded box-shadow">
+                    <h6 class="border-bottom border-gray pb-2 mb-0">Suggestions</h6>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&amp;bg=007bff&amp;fg=007bff&amp;size=1" alt="32x32"
+                            class="mr-2 rounded"
+                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174ab561864%20text%20%7B%20fill%3A%23007bff%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174ab561864%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23007bff%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.6640625%22%20y%3D%2217.096875%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                            data-holder-rendered="true" style="width: 32px; height: 32px;">
+                        <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <div class="d-flex justify-content-between align-items-center w-100">
+                                <strong class="text-gray-dark">Full Name</strong>
+                                <a href="#">Follow</a>
+                            </div>
+                            <span class="d-block">@username</span>
+                        </div>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&amp;bg=007bff&amp;fg=007bff&amp;size=1" alt="32x32"
+                            class="mr-2 rounded"
+                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174ab561866%20text%20%7B%20fill%3A%23007bff%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174ab561866%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23007bff%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.6640625%22%20y%3D%2217.096875%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                            data-holder-rendered="true" style="width: 32px; height: 32px;">
+                        <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <div class="d-flex justify-content-between align-items-center w-100">
+                                <strong class="text-gray-dark">Full Name</strong>
+                                <a href="#">Follow</a>
+                            </div>
+                            <span class="d-block">@username</span>
+                        </div>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&amp;bg=007bff&amp;fg=007bff&amp;size=1" alt="32x32"
+                            class="mr-2 rounded"
+                            src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_174ab561868%20text%20%7B%20fill%3A%23007bff%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_174ab561868%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23007bff%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.6640625%22%20y%3D%2217.096875%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                            data-holder-rendered="true" style="width: 32px; height: 32px;">
+                        <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <div class="d-flex justify-content-between align-items-center w-100">
+                                <strong class="text-gray-dark">Full Name</strong>
+                                <a href="#">Follow</a>
+                            </div>
+                            <span class="d-block">@username</span>
+                        </div>
+                    </div>
+                    <small class="d-block text-right mt-3">
+                        <a href="#">All suggestions</a>
+                    </small>
+                </div>
+
+            </div>
+
+        </div><!-- /galery47 -->
+
+        <!-- =============================== Example #2.23 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.23</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery48').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 6000,
+    animationType: 'zoomOutInDown/zoomOutInUp',
+    animationTime: 'animate__slow',
+    hoverAnimation: true,
+    hoverAnimationType: 'wobble',
+    constSliderHeight: true,
+})
+            </code>
+        </pre>
+
+        <div id="galery48" class="container my-3">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img class="card-img-top" data-src="https://placem.at/places" alt="Thumbnail [100%x225]"
+                            style="height: 225px; width: 100%; display: block;" src="https://placem.at/places"
+                            data-holder-rendered="true">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-dark text-white">
+                <img class="card-img-top" data-src="https://placem.at/places" alt="Thumbnail [100%x225]"
+                    style="height: 225px; width: 100%; display: block;" src="https://placem.at/places"
+                    data-holder-rendered="true">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+            </div> 
+
+        </div><!-- /galery48 -->
+
+        <!-- =============================== Example #2.24 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.24</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery49').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 5500,
+    animationType: 'zoomOutInLeft/zoomOutInRight',
+    hoverAnimation: true,
+    hoverAnimationType: 'tada',
+    constSliderHeight: true,
+    overflowHidden: false,
+    control: false,
+})
+            </code>
+        </pre>
+
+        <div id="galery49" class="container my-3">
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <div class="card-footer">
+                    Card footer
+                </div>
+            </div>
+
+            <div>
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Well done!</h4>
+                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a
+                        bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                    <hr>
+                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+                    </p>
+                </div>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Featured
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+
+        </div><!-- /galery49 -->
+
+        <!-- =============================== Example #2.25 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.25</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery50').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 7500,
+    animationType: 'slideOutInDown/slideOutInUp',
+    animationTime: 'animate__slower',
+    hoverAnimation: true,
+    hoverAnimationType: 'jello',
+    constSliderHeight: true,
+})
+            </code>
+        </pre>
+
+        <div id="galery50" class="container my-3">
+
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img1.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Mark Willson</h5>
+                        <p class="card-text font">Learning is fun!</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img2.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Ali Pazani</h5>
+                        <p class="card-text">I like online courses.</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img3.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Andrea Piacquadio</h5>
+                        <p class="card-text">Education is the key.</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
+                <div class="card card-team ml-auto mr-auto">
+                    <img src="img/team/img4.jpg" class="card-img-top" alt="#">
+                    <div class="card-body">
+                        <h5 class="card-title font text-dark font-weight-bold">Cora Johnson</h5>
+                        <p class="card-text">I love teaching!</p>
+                        <div class="link-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/home" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="btn btn-team rounded-circle"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /galery50 -->
+
+        <!-- =============================== Example #2.26 =================================== -->
+
+        <p class="mb-1 font-weight-bold">Example #2.26</p>
+        <p class="mb-1">Initialization:</p>
+
+        <pre class="bg-dark text-light text-left rounded px-3">
+            <code>
+$('#galery51').animateCssSlider({
+    contentSrc: 'html',
+    autoplayInterval: 5500,
+    animationType: 'slideOutInLeft/slideOutInRight',
+    animationTime: 'animate__fast',
+    hoverAnimation: true,
+    hoverAnimationType: 'heartBeat',
+    constSliderHeight: true,
+    control: false,
+})
+            </code>
+        </pre>
+
+        <div id="galery51" class="container my-3">
+
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img2.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Graphic & Web Design</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                        harum tenetur commodisquam praesentium
+                        cupiditate consequatur odio molestiae? Animi natus dolorem qui laboriosam quia!
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico2.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Ali Pazani</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 80</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img5.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Art of Business Negotiations</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat sit molestiae tenetur
+                        ullam expedita maxime iusto eveniet. Labore hic, delectus inventore!
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico1.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Mark Willson</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 50</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-courses mr-4 ml-4">
+                <img src="img/courses/img6.jpg" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title font text-dark font-weight-bold">Social Media Management</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci perferendis
+                        officiis recusandae dolor ipsam dolorum dolores. Qui eos eaque consectetur molestiae,
+                        doloribus aspernatur nam excepturi ea atque beatae iste? Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Molestias adipisci perferendis
+                        officiis recusandae dolor ipsam dolorum dolores.
+                    </p>
+                </div>
+                <div class="card-footer card-courses-footer d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center ">
+                        <img class="courses-footerIcon d-block mr-3" src="img/courses/icon/ico2.jpg" alt="#">
+                        <p class="card-title font text-dark font-weight-bold">Ali Pazani</p>
+                    </div>
+                    <div
+                        class="courses-price font text-light font-weight-bold text-center d-flex align-items-center justify-content-center">
+                        <p class="mb-0">USD 25</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /galery51 -->
 
         <h2 class="display-5 bg-primary text-light rounded mb-3">Enjoy it!</h2>
     </div>
