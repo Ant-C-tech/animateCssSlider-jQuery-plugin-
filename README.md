@@ -42,7 +42,7 @@ body {
 Yep, include jQuery 3.5.1, animateCssSlider and your own app files after your css-link to your HTML head.
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script defer src="js/animateCssSlider.jquery.js"></script>
+<script defer src="js/animateCssSlider.jquery.min.js"></script>
 <script defer src="js/app.js"></script>
 ```
 
