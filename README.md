@@ -94,3 +94,22 @@ Now call in your app.js file the initializer function for your every slider with
 ```js
 $('#galery').animateCssSlider()
 ```
+
+Slider settings
+-----------------------------------
+
+By default slider has next settings:
+```js
+{
+    contentSrc: 'array',
+    auto: true,
+    autoplayInterval: 3500,
+    animationType: 'fadeOut/fadeIn',
+    animationTime: '',
+    hoverAnimation: false,
+    hoverAnimationType: 'pulse',
+    constSliderHeight: false,
+    overflowHidden: true,
+    control: true,
+}
+```
