@@ -113,3 +113,81 @@ By default slider has next settings:
     control: true,
 }
 ```
+
+You can change slider settings by next way:
+
+1. **contentSrc** - specify content to generate slides - type: string:
+    * "array" (default) - in case the collection of slides is some array;
+    * "html" - in case the collection of slides is html content of your container.
+
+2. **auto** - start slideshow when slider is within the user's screen (stop slideshow on hover) - type: boolean:
+    * true (default);
+    * false.
+
+3. **autoplayInterval** - autoplay interval timeout - type: number (ms).
+Autoplay interval have to be longer than two "animationTime".
+
+4. **animationType** - animation by Animate.css library - type: string:
+    * "fadeOut/fadeIn" (default);
+    * "fadeOutInDown/fadeOutInUp";
+    * "fadeOutInDownBig/fadeOutInUpBig";
+    * "fadeOutInLeft/fadeOutInRight";
+    * "fadeOutInLeftBig/fadeOutInRightBig";
+    * "fadeOutInLeftTop/fadeOutInRightBottom";
+    * "fadeOutInLeftBottom/fadeOutInRightTop";
+    * "backOutInDown/backOutInUp";
+    * "backOutInLeft/backOutInRight";
+    * "bounceOut/bounceIn"
+    * "bounceOutInDown/bounceOutInUp";
+    * "bounceOutInLeft/bounceOutInRight";
+    * "flipOutY/flipInY";
+    * "flipOutX/flipInX";
+    * "lightSpeedOutInLeft/lightSpeedOutInRight";
+    * "rotateOutInDownLeft/rotateOutInUpLeft";
+    * "rotateOutInDownRight/rotateOutInUpRight";
+    * "hingeOut/fadeIn";
+    * "bounceOut/jackInTheBox";
+    * "rollOut/rollIn";
+    * "zoomOut/zoomIn";
+    * "zoomOutInDown/zoomOutInUp";
+    * "zoomOutInLeft/zoomOutInRight";
+    * "slideOutInDown/slideOutInUp";
+    * "slideOutInLeft/slideOutInRight".
+
+5. **animationTime** - you can control the speed of the animation - type: string:
+    * "animate__slower" - 3s;
+    * "animate__slow" - 2s;
+    * "" - 1s (default);
+    * "animate__fast" - 800ms;
+    * "animate__faster" - 500ms.
+
+6. **hoverAnimation** - animation effect on slide hover - type: boolean:
+    * true;
+    * false (default).
+    * hoverAnimationType - hover animation by Animate.css library - type: string:
+    * "pulse" (default);
+    * "bounce";
+    * "rubberBand";
+    * "shakeX";
+    * "shakeY";
+    * "headShake";
+    * "swing";
+    * "tada;
+    * "wobble";
+    * "jello";
+    * "heartBeat".
+
+7. **constSliderHeight** - if "true" than the slider height is constant and approximately equal to the height of the largest slide - type: boolean:
+    * true;
+    * false (default).
+
+8. **overflowHidden** - container css property "overflow: hidden" - specifies what happens if content overflows an element's box - type: boolean:
+    * true (default);
+    * false.
+
+9. **control** - add some control elements (buttons "prev", "next") - type: boolean.
+If "control: false" you can switch slide with click on it.
+    * true (default);
+    * false.
+    
+For examples see page: https://ant-c-tech.github.io/animateCssSlider-jQuery-plugin-/
